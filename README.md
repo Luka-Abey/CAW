@@ -11,9 +11,11 @@ Questions/clarifications/support for ideas
 
 ## Install & Run Locally:
 
-Navigate to where you'd like to install the project locally, open bash and:
+Fork the repo to your own account.
+
+Navigate to where you'd like to install the project locally, open bash, and:
 ```
-git clone https://github.com/Luka-Abey/community-action-on-waste
+git clone https://github.com/<your-username>/community-action-on-waste
 ```
 
 In the project directory, you can run:
