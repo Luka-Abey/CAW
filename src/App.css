@@ -27,6 +27,7 @@
   color: #282c34;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 70%;
 }
 
 .banner {
@@ -53,12 +54,6 @@
 
 .nav-link {
   color: #FFFFFF;
-}
-
-.navbar-fixed-top {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 #linked::before {

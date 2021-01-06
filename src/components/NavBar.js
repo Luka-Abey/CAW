@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React,{Component} from 'react';
 import { Link, animateScroll } from 'react-scroll';
-export default class Navbar extends Component{
 
+export default class Navbar extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -15,11 +15,9 @@ export default class Navbar extends Component{
       }
    
       render() {
-
         const show= (this.state.navbar) ?"show":"" ;
-
         return (
-            <nav className="navbar navbar-fixed-top navbar-expand-md navbar" style={{backgroundColor: "#282c34"}}>
+            <nav className="navbar navbar-expand-md navbar" style={{backgroundColor: "#282c34"}}>
                         <button className="navbar-toggler" type="button" onClick={ this.toggleMenu }>
                         <span className="navbar-toggler-icon" style={{color: "white"}}>Menu</span>
                     </button>
