@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React,{Component} from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
-import Logo from '../media/logo.jpg'
-
+import { Link, animateScroll } from 'react-scroll';
 export default class Navbar extends Component{
 
     constructor(props) {

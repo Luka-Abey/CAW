@@ -15,7 +15,7 @@ function App() {
           {/* <img src={Logo} className="banner"/> */}
       </header>
       <FadeInSection>
-      <About></About>
+        <About></About>
       </FadeInSection>
     </div>
 

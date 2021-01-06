@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
   font-size: calc(10px + 2vmin);
   color:  #282c34;
 }
@@ -18,6 +19,14 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: #282c34;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 200px;
+  color: #282c34;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .banner {
@@ -47,7 +56,9 @@
 }
 
 .navbar-fixed-top {
-
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 #linked::before {
