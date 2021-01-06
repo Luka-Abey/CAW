@@ -1,25 +1,32 @@
 .App{
-  color: #282c34;
+  background-color: #FFFFFF;
 }
 
 .App-header {
-  background-color: #7dbda0;
   min-height: 5vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: calc(10px + 2vmin);
   color:  #282c34;
 }
 
 .App-body {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
+}
+
+.banner {
+  height: 100px;
+}
+
+.background {
+  opacity: 0.1;
+  height: 1500px;
 }
 
 .fade-in-section {
@@ -37,6 +44,10 @@
 
 .nav-link {
   color: #FFFFFF;
+}
+
+.navbar-fixed-top {
+
 }
 
 #linked::before {

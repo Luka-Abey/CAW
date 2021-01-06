@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React,{Component} from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-
+import Logo from '../media/logo.jpg'
 
 export default class Navbar extends Component{
 
@@ -16,8 +16,7 @@ export default class Navbar extends Component{
         this.setState({ navbar: !this.state.navbar })
       }
    
-
-        render() {
+      render() {
 
         const show= (this.state.navbar) ?"show":"" ;
 
@@ -52,5 +51,5 @@ export default class Navbar extends Component{
                     </div>
                     </nav>
         )
-        }
+      }
     }
