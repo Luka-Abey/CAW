@@ -37,5 +37,5 @@ You will also see any lint errors in the console.
 React, JavaScript, backend and db tbc.
   
 ## Contributions
-Please get in touch if you'd like to contribute, or go ahead and open a PR :)
+Please get in touch if you'd like to contribute, or go ahead and open a PR :) 
 
