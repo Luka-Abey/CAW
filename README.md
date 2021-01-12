@@ -23,12 +23,12 @@ In the project directory, you can run:
 npm i
 ```
 which will install all necessary dependencies mentioned in package.json.
-Followed by:
+Now `cd server` and `npm i`, `cd ..`, `cd client` and `npm i`.
+This will install dependencies for client and server, which are treated separately. After `cd ..`, the package.json in the root directory allows you to run the server and client in the one command:
 ```
-npm start
+npm run dev
 ```
-Which runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Which runs the app in the development mode, and will open your browser.<br />
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
