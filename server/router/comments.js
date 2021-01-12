@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const Post = require('../models/Comment');
-const showdown = require('showdown');
-
-converter = new showdown.Converter();
 
 router.get('/', (req, res) => {
   Comment.find()

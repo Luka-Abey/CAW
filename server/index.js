@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const submissions = require('./router/submissions.js')
-// const comments = require('./router/comments')
+const comments = require('./router/comments')
 const app = express()
 const cors = require('cors')
 const port = 5000
@@ -14,17 +14,17 @@ mongoose.set('useCreateIndex', true)
 mongoose.set('useUnifiedTopology', true)
 
 // Connect DB
-const db = require(process.env.MONGO_URI)
-console.log(db);
+const db = require('./keys.js').mongoURI
 
-// Avoid CORS error
-app.use(
-  cors({
-    origin: url,
-    credentials: true
-    // exposedHeaders: ['set-cookie']
-  })
-)
+
+// // Avoid CORS error
+// app.use(
+//   cors({
+//     origin: url,
+//     credentials: true
+//     // exposedHeaders: ['set-cookie']
+//   })
+// )
 
 // BodyParser
 app.use(express.json())
