@@ -1,3 +1,3 @@
-const port = 5000;
+const port = 6000;
 
 console.log(`server started on ${port}`);
