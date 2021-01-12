@@ -13,11 +13,6 @@ mongoose.set('useFindAndModify', false)
 mongoose.set('useCreateIndex', true)
 mongoose.set('useUnifiedTopology', true)
 
-
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
 // Connect DB
 const db = require(process.env.MONGO_URI)
 console.log(db);
