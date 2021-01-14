@@ -1,8 +1,52 @@
 
-.wallpaper-container { 
+.wallpaper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: url(../media/hydepark.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100vw;
-    overflow: hidden;
-    background-position: 0px -200px;
+    height: 100%;
+    max-width: 100vw;
+    top: -60px;
+    position: relative; 
+
+    .welcome-content { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .main-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin-top: 10px;
+        height: 400px;
+    }
+
+    .about-caw-info { 
+        margin-top: 65px;
+        width: 75%;
+        padding: 25px;
+    }
+
+    .current-project-info {
+        width: 75%;
+        padding: 25px;
+    }
+
+    .custom-heading { 
+        font-size: 2em;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+.img-fluid {
+    width: 500px;
+    height: 500px;
 }
