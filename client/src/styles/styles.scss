@@ -15,24 +15,29 @@ html {
   display: flex;
   justify-content: flex-end;
   font-size: 2.5em;
+  text-decoration: none;
 
-  .nav-links {
+  .nav-links-caw {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    text-decoration: none;
     margin-right: 50px;
   }
 }
 
-.link {
+.link-caw {
   text-decoration: none;
   font-size: 0.5em;
   color: white;
   font-weight: bold;
   margin: 10px 12px;
+  transition: 0.5s;
+  text-decoration-line: underline;
 
   &:hover {
-    text-decoration: none;
+    color: #7ebda0;
+    text-decoration-line: underline;
   }
 }
 
