@@ -10,7 +10,6 @@ const Home: React.FC = () => {
         <img className="img-fluid" src="https://imgur.com/fNMGwNr.png" alt="logo"/>
       </div>
     </div> 
-
     {/* ========================================================================================= */}
     <div className="main-content-container">
       <div className="about-caw-info">
