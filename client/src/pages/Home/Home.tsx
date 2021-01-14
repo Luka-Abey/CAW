@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       </div>
     </div> 
 
-    {/* ======================================================================================== */}
+    {/* ========================================================================================= */}
     <div className="main-content-container">
       <div className="about-caw-info">
       <h2 className="custom-heading">Who are C.A.W</h2>
