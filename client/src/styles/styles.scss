@@ -21,6 +21,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    text-decoration: none;
     margin-right: 50px;
   }
 }
@@ -31,8 +32,9 @@ html {
   color: white;
   font-weight: bold;
   margin: 10px 12px;
+  transition: 0.5s;
   &:hover {
-    text-decoration: none;
+    color: blue;
   }
 }
 
