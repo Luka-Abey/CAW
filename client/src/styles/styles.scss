@@ -24,6 +24,7 @@ html {
     text-decoration: none;
     margin-right: 50px;
   }
+
 }
 
 .link-caw {
@@ -34,16 +35,13 @@ html {
   margin: 10px 12px;
   transition: 0.5s;
   text-decoration-line: underline;
-
   &:hover {
     color: #7ebda0;
-    text-decoration-line: underline;
   }
 }
 
 h1 {
   font-family: "Indie Flower", cursive;
   color: black;
-  // text-decoration: underline;
   font-size: 2.5em;
 }
