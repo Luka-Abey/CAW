@@ -12,9 +12,9 @@ const Home: React.FC = () => {
     </div> 
     {/* ========================================================================================= */}
     <div className="main-content-container">
-      <div className="about-caw-info">
+      <div className="info-wrapper">
       <h2 className="custom-heading">Who are C.A.W</h2>
-      <hr/>
+      <hr />
       <div className="text-wrapper">
         <p>Community Action on Waste is a Leeds based community co-operative , made up of local residents, alumni and students. Every year, in June, hundreds of tonnes of waste is left on the streets of Leeds. The kind of things left are exactly the kind of things new students will be buying new in September. We want this to end.
         <br/>
@@ -24,15 +24,130 @@ const Home: React.FC = () => {
       </div>
       
       </div>
-      <div className="current-project-info">
+      <div className="info-wrapper">
         <h2 className="custom-heading">Current Project</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rem aut architecto deleniti laboriosam tenetur consequuntur maxime, doloremque eum laborum harum fugit iste numquam ut esse enim magnam animi quam.</p>
+        <hr/>
+        <div className="text-wrapper">
+        <p>Using the money raised from our shops, we are funding an idea as to what to put at the end of a street that has planters cutting off traffic as part of the Active Travel Neighbourhoods. These ideas are coming from the community and will be implemented by the community.</p>
+        <div className="vl"/>
+
+        </div>
       </div>
+
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">What's the aim of this project?</h3>
+        <div className="text-wrapper">
+          <p>
+          We think that in order to put an end to the student waste lifecycle, a shift in behaviour and attitude needs to be implemented from the bottom up. The place we live in should be one we all care about. We can envision what goes on our streets together and we can make it a reality!
+          <br/>
+          <br/>
+          We encourage ideas that:
+          </p>
+            <ul>
+              <li>Bring people together</li>
+              <li>Provide a space that offers something new</li>
+              <li>Create something local people can enjoy for free</li>
+              <li>Improve daily life and mental wellbeing</li>
+              <li>Improve the environment</li>
+              <li>Tackle issues of waste</li>
+            </ul>
+        </div>
+        <div className="vl"/>
+      </div>
+
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">Submitting Your Idea</h3>
+        <div className="text-wrapper">
+          <p>Please submit your idea before 20th February. You can do so on our website <a href="/submission">submit idea</a>, or by contacting one of our team via email or text on: 
+          There is a template with questions to help you think about your idea in more detail, and you can check out our idea for clues. However if you find the template does not work for your idea, we will find a way to submit your idea - be that by video, or a diagram.
+          There is no need to come to the online sessions to submit your idea.
+          </p>
+        </div>
+        <div className="vl"/>
+      </div>
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">Submitting Feedback</h3>
+        <div className="text-wrapper">
+          <p>Feedback is very important and will be the main factor on which the panel decide the winning idea. You can submit your feedback through the website or by contacting one of our team … Please leave constructive feedback on ideas, as the volunteers who complete the project will take these comments into account. The more constructive your feedback, the more sway it will have over the panel. If there are many comments saying the same thing (e.g. I like this/ I don’t like this), they will not have as much sway.
+          </p>
+        </div>
+        <div className="vl"/>
+      </div>
+
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">Who Can Submit?</h3>
+        <div className="text-wrapper">
+          <p>Anyone! If you have trouble using our website, or have trouble using Zoom (where we will be hosting two sessions to chat about ideas), please get in touch we us via text or email on:
+          </p>
+        </div>
+        <div className="vl"/> 
+      </div>    
+      <div className="info-wrapper">
+        <h3 className="custom-heading">Online Sessions</h3>
+        <hr/>
+        <div className="text-wrapper">
+          <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way. <br/> They are:
+          </p>
+        </div>
+      </div>
+
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">30th Jan Coffee Morning Meetup</h3>
+        <div className="text-wrapper">
+          <p>Whether you have a burning idea or just want to get involved. We will discuss each other's ideas and have a friendly natter. If you are still a bit hazy about your idea then this is perfect for you as we can all help brainstorm together.
+          </p>
+        </div>
+        <div className="vl"/>
+      </div>
+
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">13h Feb Project Presentations</h3>
+        <div className="text-wrapper">
+          <p>This is a chance to raise awareness of your idea and to check out the ideas that are on the table. If you’ve got an idea, you get some time to talk about it and why it’s so great! If you’re interested in what others are thinking, you can ask some questions. 
+          <br/>
+          <br/>
+          Please sign up to these by emailing or texting us on:
+          </p>
+        </div>
+      </div>
+      
+      <div className="info-wrapper">
+        <h2 className="custom-heading">How will the winning project be decided?</h2>
+        <hr className="winning-project"/>
+        <div className="text-wrapper">
+          <p>We will invite a panel of community leaders to vote on the winning idea based on a few factors. Feedback; viability; budgeting and how well it contributes to our aims.
+          </p>
+        </div>
+        <div className="vl"/>
+      </div>
+     
+      <div className="info-wrapper sub-text">
+        <h3 className="custom-heading-h3">What will happen after the winner is decided?</h3>
+        <div className="text-wrapper">
+          <p>We will ask volunteers to join a co-operative working group. The person who submitted the idea may well want to be a part of this! The group will work with a flat hierarchy to complete the project, and make decisions by consensus.
+          </p>
+        </div>
+        <div className="vl"/>
+      </div>
+      
+      <div className="info-wrapper">
+        <h3 className="custom-heading">Our Take On ATN's</h3>
+        <div className="text-wrapper">
+          <p>These planters have been controversial, we know. But we think they represent an opportunity to make the place we live better, so that people will be kinder to our streets and one another.
+          </p>
+        </div>
+        <div className="vl"/>
+      </div>
+    {/* ======================================================================================== */}
+      <footer className="footer">
+      <p>Contact Us</p>
+      <p>Phone: 07XXXXXXXXXX</p>
+      <p>Email: communityactionwaste@gmail.com</p>
+      <p>Connect With Us: <a href="https://www.facebook.com/CommunityActionWaste" target="_blank">Facebook</a></p>
+    </footer>
     </div>
     {/* ======================================================================================== */}
-    <footer>
-      <p>Contact Us: <a href="https://www.facebook.com/CommunityActionWaste">Facebook</a></p>
-    </footer>
+
   </>
   )
 };
