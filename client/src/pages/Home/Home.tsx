@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       <h2 className="custom-heading">Who are C.A.W</h2>
       <hr/>
       <div className="text-wrapper">
-        <p>Community Action on Waste is a Leeds based community co-operative , made up of local residents, alumni and students. Every year, in June, hundreds of tonnes of waste is left on the streets of Leeds. The kind of things left are exactly the kind of things new students will be buying new in September. We want this to end.
+        <p>Community Action on Waste is a Leeds-based community co-operative, made up of local residents, alumni and students. Every year, in June, hundreds of tonnes of waste is left on the streets of Leeds. The kind of things left are exactly the kind of things new students will be buying new in September. We want this to end.
         <br/>
         <br/>
         You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. We put a load of stuff donated by students in June into one of our members' basements. Then, we set up shop in September to give it back to students as they arrived in Leeds - pay as you feel. We raised over £250 and we’re very happy about this!
