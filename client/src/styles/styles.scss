@@ -74,9 +74,11 @@ html {
 
   }
 
-  // .nav-links-caw li{
-  //   opacity: 0;
-  // }
+  .link-caw li {
+    list-style-type: none;
+    text-align: right;
+    line-height: 75px;
+  }
 
   .burger{
     display: block;
