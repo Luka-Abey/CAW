@@ -10,8 +10,7 @@
   "scripts": {
     "server": "node index.js --prefix server",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"nodemon run server\" \"npm run client\"",
-    "build": "concurrently \"nodemon run server\" \"npm run client\""
+    "dev": "concurrently \"nodemon run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": "react-app"
