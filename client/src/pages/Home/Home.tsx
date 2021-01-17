@@ -19,6 +19,7 @@ const Home: React.FC = () => {
           <p>Community Action on Waste is a Leeds-based community co-operative, made up of local residents, students, and alumni. Every June, hundreds of tonnes of waste is left on the streets of Leeds by students moving house. The kinds of things left are exactly what incoming students will be buying new in September. We want to help put a stop to this unsustainable cycle of buying and throwing.
           <br/>
           <br/>
+         {/* eslint-disable-next-line  */}
           You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. We put a load of stuff donated by students in June into one of our members' basements. Then, we set up shop in September to give it back to students as they arrived in Leeds - pay as you feel. We raised over £250 and we’re very happy about this!
           </p>
         </div>
@@ -139,6 +140,7 @@ const Home: React.FC = () => {
       <p>Contact Us</p>
       <p>Phone: 07XXXXXXXXXX</p>
       <p>Email: communityactionwaste@gmail.com</p>
+      {/* eslint-disable-next-line */}
       <p>Connect With Us: <a href="https://www.facebook.com/CommunityActionWaste" target="_blank">Facebook</a></p>
     </footer>
     </div>
