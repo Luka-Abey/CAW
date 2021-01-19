@@ -35,6 +35,8 @@ You will also see any lint errors in the console.
 
 ## Built with
 React, TypeScript, Express, MongoDB.
+
+Testing tbc, as backend is not in development just yet.
   
 ## Contributions
 Please get in touch if you'd like to contribute, or go ahead and open a PR :) 
