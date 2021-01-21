@@ -135,14 +135,24 @@ const Home: React.FC = () => {
         </div>
       </div>
     {/* ======================================================================================== */}
-      <footer className="footer">
-      <p>Contact Us</p>
-      <p>Phone: 07XXXXXXXXXX</p>
-      <p>Email: communityactionwaste@gmail.com</p>
-      <p>Connect With Us: <a href="https://www.facebook.com/CommunityActionWaste" target="_blank">Facebook</a></p>
-    </footer>
+      <div className="footer-basic">
+        <footer>    
+          <div className="social"><a href="https://www.facebook.com/CommunityActionWaste" target="_blank"><i className="fab fa-facebook-f"></i></a></div>
+          <ul className="list-inline">
+              <li className="list-inline-item"><a href="#">Home</a></li>
+              <li className="list-inline-item"><a href="#">Submit An Idea</a></li>
+              <li className="list-inline-item"><a href="#">Current Submissions</a></li>
+          </ul>
+          <ul className="list-inline">
+              <li className="list-inline-item">Phone: 07XXXXXXXXXX</li>
+              <li className="list-inline-item">Email Us: communityactionwaste@gmail.com</li>
+          </ul>
+          <p className="copyright">Community Action On Waste © 2021</p>
+        </footer>
+      </div>
     </div>
     {/* ======================================================================================== */}
+    
 
   </>
   )
