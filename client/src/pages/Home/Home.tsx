@@ -16,9 +16,10 @@ const Home: React.FC = () => {
         <h2 className="custom-heading">Who are C.A.W</h2>
         <hr className="hr" />
         <div className="text-wrapper-main">
-          <p>Community Action on Waste is a Leeds based community co-operative , made up of local residents, alumni and students. Every year, in June, hundreds of tonnes of waste is left on the streets of Leeds. The kind of things left are exactly the kind of things new students will be buying new in September. We want this to end.
+          <p>Community Action on Waste is a Leeds-based community co-operative, made up of local residents, students, and alumni. Every June, hundreds of tonnes of waste is left on the streets of Leeds by students moving house. The kinds of things left are exactly what incoming students will be buying new in September. We want to help put a stop to this unsustainable cycle of buying and throwing.
           <br/>
           <br/>
+         {/* eslint-disable-next-line  */}
           You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. We put a load of stuff donated by students in June into one of our members' basements. Then, we set up shop in September to give it back to students as they arrived in Leeds - pay as you feel. We raised over £250 and we’re very happy about this!
           </p>
         </div>
@@ -29,7 +30,7 @@ const Home: React.FC = () => {
           <h2 className="custom-heading">Current Project</h2>
           <hr className="hr white"/>
           <div className="text-wrapper">
-            <p>Using the money raised from our shops, we are funding an idea as to what to put at the end of a street that has planters cutting off traffic as part of the Active Travel Neighbourhoods. These ideas are coming from the community and will be implemented by the community.</p>
+            <p>Using the money raised from our shops, we are looking to fund a project idea to decorate and invigorate street sections cut off as part of the Active Travel Neighbourhoods initiative. These ideas are coming from the community and will be implemented by the community.</p>
           </div>
         </div>
 
@@ -58,7 +59,7 @@ const Home: React.FC = () => {
         <div className="info-wrapper sub-text-submit">
           <h3 className="custom-heading-h3">Submitting Your Idea</h3>
           <div className="text-wrapper">
-            <p>Please submit your idea before 20th February. You can do so on our website <a href="/submission">submit idea</a>, or by contacting one of our team via email or text on: 
+            <p>Please submit your idea before 20th February. You can do so on our website <a href="/submission">submit idea</a>, or by contacting one of our team. 
             There is a template with questions to help you think about your idea in more detail, and you can check out our idea for clues. However if you find the template does not work for your idea, we will find a way to submit your idea - be that by video, or a diagram.
             There is no need to come to the online sessions to submit your idea.
             </p>
@@ -67,7 +68,7 @@ const Home: React.FC = () => {
         <div className="info-wrapper sub-text-submit">
           <h3 className="custom-heading-h3">Submitting Feedback</h3>
           <div className="text-wrapper">
-            <p>Feedback is very important and will be the main factor on which the panel decide the winning idea. You can submit your feedback through the website or by contacting one of our team … Please leave constructive feedback on ideas, as the volunteers who complete the project will take these comments into account. The more constructive your feedback, the more sway it will have over the panel. If there are many comments saying the same thing (e.g. I like this/ I don’t like this), they will not have as much sway.
+            <p>Feedback is very important and will be the main factor in deciding the winning idea. You can submit your feedback through the website or by contacting one of our team. Please leave descriptive feedback on ideas, as the volunteers who complete the project will take these comments into account. The more constructive your feedback, the more useful it will be for the panel.
             </p>
           </div>
         </div>
@@ -75,7 +76,7 @@ const Home: React.FC = () => {
         <div className="info-wrapper sub-text-submit">
           <h3 className="custom-heading-h3">Who Can Submit?</h3>
           <div className="text-wrapper">
-            <p>Anyone! If you have trouble using our website, or have trouble using Zoom (where we will be hosting two sessions to chat about ideas), please get in touch we us via text or email on:
+            <p>Anyone! If you have trouble using our website, or have trouble using Zoom (where we will be hosting two sessions to chat about ideas), please get in touch with us via text or email on:
             </p>
           </div>
         </div>    
@@ -85,7 +86,7 @@ const Home: React.FC = () => {
         <h3 className="custom-heading">Online Sessions</h3>
         <hr className="hr"/>
         <div className="text-wrapper">
-          <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way. <br/> They are:
+          <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way.
           </p>
         </div>
       </div>
@@ -99,7 +100,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="info-wrapper sub-text">
-        <h3 className="custom-heading-h3">13h Feb Project Presentations</h3>
+        <h3 className="custom-heading-h3">13th Feb Project Presentations</h3>
         <div className="text-wrapper">
           <p>This is a chance to raise awareness of your idea and to check out the ideas that are on the table. If you’ve got an idea, you get some time to talk about it and why it’s so great! If you’re interested in what others are thinking, you can ask some questions. 
           <br/>
@@ -111,9 +112,9 @@ const Home: React.FC = () => {
       
       <div className="info-wrapper">
         <h2 className="custom-heading">How will the winning project be decided?</h2>
-        <hr className=" hr winning"/>
+        <hr className="hr winning"/>
         <div className="text-wrapper">
-          <p>We will invite a panel of community leaders to vote on the winning idea based on a few factors. Feedback; viability; budgeting and how well it contributes to our aims.
+          <p>We will invite a panel of community leaders to vote on the winning idea based on a few factors: feedback, viability, budgeting, and how well it fulfils our aims.
           </p>
         </div>
       </div>
