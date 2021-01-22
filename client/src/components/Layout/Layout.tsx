@@ -25,10 +25,10 @@ const Layout: React.FC = ({ children }) => {
         <li className="link-caw">HOME</li>
       </Link>
       <Link to="/submission">
-        <li className="link-caw">SUBMIT A PROJECT IDEA</li>
+        <li className="link-caw">SUBMIT AN IDEA</li>
       </Link>
       <Link to="/projects">
-        <li className="link-caw">CURRENT PROJECTS</li>
+        <li className="link-caw">CURRENT IDEAS</li>
       </Link>
     </ul>
     <div 
