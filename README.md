@@ -41,7 +41,6 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ## Built with
-
 React, TypeScript, Express, MongoDB.
 
 Testing tbc, as backend is not in development just yet.
