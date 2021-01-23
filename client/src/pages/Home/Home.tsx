@@ -1,15 +1,12 @@
 import React from 'react';
+import Footer from '../../components/Footer/Footer'
+import Wallpaper from './components/Wallpaper'
 
 const Home: React.FC = () => {
  
   return (
   <>
-    <div className="wallpaper-container">
-      <div className="welcome-content">
-        {/* <h1 className="title">Welcome To</h1>  */}
-        <img className="img-fluid" src="https://imgur.com/fNMGwNr.png" alt="logo"/>
-      </div>
-    </div> 
+    <Wallpaper />
     {/* ========================================================================================= */}
     <div className="main-content-container">
         <div className="info-wrapper ">
@@ -134,28 +131,8 @@ const Home: React.FC = () => {
           </p>
         </div>
       </div>
-    {/* ======================================================================================== */}
-      <div className="footer-basic">
-        <footer>    
-          <div className="social"><a href="https://www.facebook.com/CommunityActionWaste" target="_blank"><i className="fab fa-facebook-f"></i></a></div>
-          <ul className="list-inline">
-              <li className="list-inline-item"><a href="#">Home</a></li>
-              <li className="list-inline-item"><a href="#">Submit An Idea</a></li>
-              <li className="list-inline-item"><a href="#">Current Ideas</a></li>
-          </ul>
-          <p className="contact-us">Contact Us:</p>
-
-          <ul className="list-inline">
-              <li className="list-inline-item">Phone Lily: 07498577571</li>
-              <li className="list-inline-item">Email: communityactionwaste@gmail.com</li>
-          </ul>
-          <p className="copyright">Community Action On Waste © 2021</p>
-        </footer>
-      </div>
+      <Footer />
     </div>
-    {/* ======================================================================================== */}
-    
-
   </>
   )
 };
