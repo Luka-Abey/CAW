@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer'
-import Wallpaper from './components/Wallpaper'
+import Wallpaper from '../../components/Wallpaper/Wallpaper'
 
 const Home: React.FC = () => {
  
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
 
       <div className="background-wrapper">
         <div className="info-wrapper current-project">
-          <h2 className="custom-heading">Current Project</h2>
+          <h2 className="header custom-heading">Current Project</h2>
           <hr className="hr white"/>
           <div className="text-wrapper">
             <p>Using the money raised from our shops, we are looking to fund a project idea to decorate and invigorate street sections cut off as part of the Active Travel Neighbourhoods (ATN) initiative. These ideas are coming from the community and will be implemented by the community.</p>
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="info-wrapper sub-text">
-          <h3 className="custom-heading-h3">What's the aim of this project?</h3>
+          <h3 className="header custom-heading-h3">What's the aim of this project?</h3>
           <div className="text-wrapper">
             <p>
             We think that in order to put an end to the student waste lifecycle, a shift in behaviour and attitude needs to be implemented from the bottom up. The place we live in should be one we all care about. We can envision what goes on our streets together and we can make it a reality!
@@ -50,7 +50,6 @@ const Home: React.FC = () => {
             </ul>
           </div>
       </div>
-
         </div>
   {/* ============================================ SUBMITTING ======================================================== */}
       <div className="submitting-wrapper">
@@ -78,39 +77,40 @@ const Home: React.FC = () => {
             </p>
           </div>
         </div>    
-    </div>
+    </div> 
 {/* ============================================ SUBMITTING ======================================================== */}
-      <div className="info-wrapper">
-        <h3 className="custom-heading">Online Sessions</h3>
-        <hr className="hr"/>
-        <div className="text-wrapper">
-          <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way.
-          </p>
+        <div className="info-wrapper">
+          <h3 className="header custom-heading">Online Sessions</h3>
+          <hr className="hr"/>
+          <div className="text-wrapper">
+            <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="info-wrapper sub-text">
-        <h3 className="custom-heading-h3">30th Jan Coffee Morning Meetup</h3>
-        <div className="text-wrapper">
-          <p>Whether you have a burning idea or just want to get involved. We will discuss each other's ideas and have a friendly natter. If you are still a bit hazy about your idea then this is perfect for you as we can all help brainstorm together.
-          </p>
+        <div className="info-wrapper sub-text">
+          <h3 className="header custom-heading-h3">30th Jan Coffee Morning Meetup</h3>
+          <div className="text-wrapper">
+            <p>Whether you have a burning idea or just want to get involved. We will discuss each other's ideas and have a friendly natter. If you are still a bit hazy about your idea then this is perfect for you as we can all help brainstorm together.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div className="info-wrapper sub-text">
-        <h3 className="custom-heading-h3">13th Feb Project Presentations</h3>
-        <div className="text-wrapper">
-          <p>This is a chance to raise awareness of your idea and to check out the ideas that are on the table. If you’ve got an idea, you get some time to talk about it and why it’s so great! If you’re interested in what others are thinking, you can ask some questions. 
-          <br/>
-          <br/>
-          Please sign up to these by emailing or texting us on:
-          </p>
+        <div className="info-wrapper sub-text">
+          <h3 className="header custom-heading-h3">13th Feb Project Presentations</h3>
+          <div className="text-wrapper">
+            <p>This is a chance to raise awareness of your idea and to check out the ideas that are on the table. If you’ve got an idea, you get some time to talk about it and why it’s so great! If you’re interested in what others are thinking, you can ask some questions. 
+            <br/>
+            <br/>
+            Please sign up to these by emailing or texting us on:
+            </p>
+          </div>
         </div>
-      </div>
-      
       <div className="info-wrapper">
-        <h2 className="custom-heading">How will the winning project be decided?</h2>
-        <hr className="hr winning"/>
+        <div className="header heading-wrapper">
+          <h2 className="custom-heading">How will the winning project be decided?</h2>
+          <hr className="hr winning"/>
+        </div>
         <div className="text-wrapper">
           <p>We will invite a panel of community leaders to vote on the winning idea based on a few factors: feedback, viability, budgeting, and how well it fulfils our aims.
           </p>
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
       </div>
      
       <div className="info-wrapper sub-text">
-        <h3 className="custom-heading-h3">What will happen after the winner is decided?</h3>
+        <h3 className="header custom-heading-h3">What will happen after the winner is decided?</h3>
         <div className="text-wrapper">
           <p>We will ask volunteers to join a co-operative working group. The person who submitted the idea may well want to be a part of this! The group will work with a flat hierarchy to complete the project, and make decisions by consensus.
           </p>
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
       </div>
       
       <div className="info-wrapper">
-        <h3 className="custom-heading">Our Take On ATNs</h3>
+        <h3 className="header custom-heading">Our Take On ATNs</h3>
         <hr className="hr atn" />
         <div className="text-wrapper">
           <p>These planters have been controversial, we know. But we think they represent an opportunity to make the place we live better, so that people will be kinder to our streets and one another.

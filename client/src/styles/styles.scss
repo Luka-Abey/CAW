@@ -2,10 +2,12 @@
 @import "variables";
 @import "home";
 @import "footer";
+@import "submission";
 
 html {
   font-family: "Open Sans", sans-serif;
   color: $default-text-color;
+  // overflow-x: hidden;
 }
 
 .main-header {

@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(./hydepark.jpg) no-repeat center center fixed;
+  background: url(./bg-50.jpeg) no-repeat center center fixed;
+  background-position: 100% 60%;
   background-size: cover;
   height: 100%;
   max-width: 100vw;
@@ -42,14 +43,14 @@
   }
 
   .custom-heading {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: "Noto Serif", serif;
     font-weight: bold;
     color: $heading-color;
   }
 
   .custom-heading-h3 {
-    font-size: 24px;
+    font-size: 1.8em;
     font-family: "Noto Serif", serif;
     font-weight: bold;
     color: $heading-color;
@@ -69,8 +70,8 @@
 
   .submitting-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .text-wrapper-main {
@@ -91,16 +92,25 @@
     background-color: $primary-green;
     width: 220px;
 
-    &.white {
-      // background-color: $white;
-    }
-
-    &.winning {
-      width: 590px;
-    }
-
     &.atn {
       width: 270px;
+    }
+
+    // .online-sessions {
+    //   background-color: $light-green;
+    // }
+  }
+
+  .heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    .winning {
+      margin: 0px;
+      margin-top: 15px;
+      position: relative;
+      width: 55%;
     }
   }
 
@@ -114,7 +124,6 @@
     &-submit {
       text-align: center;
     }
-    // text-align: center;
   }
 
   p {
@@ -132,8 +141,8 @@
 }
 
 .img-fluid {
-  width: 500px;
-  height: 500px;
+  max-width: 100vw;
+  height: 65vh;
 }
 
 .vl {
@@ -141,28 +150,21 @@
   height: 50px;
   margin-top: 25px;
 }
-.footer {
-  width: 100vw;
-  left: 0;
-  bottom: 0px;
-  height: 50px;
-  background-color: $primary-green;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
-.my-container {
-  border: 2px red solid;
-
-  .my-row {
-    border: 1px green solid;
-    margin: 5px;
+@media screen and (max-width: $mobile) {
+  .img-fluid {
+    max-width: 100vw;
+    height: 50vh;
   }
 
-  .my-column {
-    border: 1px blue solid;
-    padding: 5px;
-    margin: 5px;
+  .footer {
+    width: 100vw;
+    left: 0;
+    bottom: 0px;
+    height: 50px;
+    background-color: $primary-green;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
