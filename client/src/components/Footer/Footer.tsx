@@ -11,7 +11,7 @@ const Footer: React.FC = () => (
             <ul className="list-inline">
                 <li className="list-inline-item"><a href="#">Home</a></li>
                 <li className="list-inline-item"><a href="/submission">Submit An Idea</a></li>
-                <li className="list-inline-item"><a href="/feedback">Current Ideas</a></li>
+                <li className="list-inline-item"><a href="/feedback">Submitted Ideas</a></li>
             </ul>
             <p className="contact-us">Contact Us:</p>
 

@@ -8,7 +8,8 @@ const Submission: React.FC = () => (
 
     <div className="submission-content">
         <h1>Submission Form Coming Soon</h1>
-        <h3>Please check this week!</h3>
+        <h3>Please check back the week commencing:</h3>
+        <h3>25/01/2021</h3>
     </div>
     <Footer /> 
   </div>

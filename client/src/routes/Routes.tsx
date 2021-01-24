@@ -5,7 +5,7 @@ import RouteConstants from './RouteConstants';
 import Layout from '../components/Layout/Layout';
 import Home from '../pages/Home/Home';
 import Submission from '../pages/Submission/Submission';
-import Feedback from '../pages/Submission/Submission';
+import Feedback from '../pages/Feedback/Feedback';
 
 const Router: React.FC = () => {
   return (
