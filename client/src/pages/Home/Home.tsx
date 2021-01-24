@@ -1,15 +1,31 @@
 import React from 'react';
+import Footer from '../../components/Footer/Footer'
+import Wallpaper from './components/Wallpaper'
 
 const Home: React.FC = () => {
  
   return (
   <>
-    <div className="wallpaper-container">
-      <div className="welcome-content">
-        {/* <h1 className="title">Welcome To</h1>  */}
-        <img className="img-fluid" src="https://imgur.com/fNMGwNr.png" alt="logo"/>
+    <Wallpaper />
+
+    <div className="container my-container">
+      <div className="row my-row">
+        <div className="col-sm my-column">
+          Row 1Column one
+        </div>
+        <div className="col-sm my-column">
+          Row 1 Column two
+        </div>
+        <div className="col-sm my-column">
+          Row 1 Column three
+        </div>
       </div>
-    </div> 
+      <div className="row my-row">
+      <div className="col-sm my-column">
+          Row 2 column 1
+        </div>
+      </div>
+    </div>
     {/* ========================================================================================= */}
     <div className="main-content-container">
         <div className="info-wrapper ">
@@ -135,6 +151,7 @@ const Home: React.FC = () => {
           </p>
         </div>
       </div>
+      <Footer />
     {/* ======================================================================================== */}
       <div className="footer-basic">
         <footer>    
@@ -147,16 +164,12 @@ const Home: React.FC = () => {
           <p className="contact-us">Contact Us:</p>
 
           <ul className="list-inline">
-              <li className="list-inline-item">Phone Lily: 07498577571</li>
               <li className="list-inline-item">Email: <a href="mailto:communityactionwaste@gmail.com">communityactionwaste@gmail.com</a></li>
           </ul>
           <p className="copyright">Community Action On Waste © 2021</p>
         </footer>
       </div>
     </div>
-    {/* ======================================================================================== */}
-    
-
   </>
   )
 };

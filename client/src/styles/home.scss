@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(https://imgur.com/8lnsSCm.png) no-repeat center center fixed;
+  background: url(./hydepark.jpg) no-repeat center center fixed;
   background-size: cover;
   height: 100%;
   max-width: 100vw;
@@ -150,4 +150,19 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.my-container {
+  border: 2px red solid;
+
+  .my-row {
+    border: 1px green solid;
+    margin: 5px;
+  }
+
+  .my-column {
+    border: 1px blue solid;
+    padding: 5px;
+    margin: 5px;
+  }
 }
