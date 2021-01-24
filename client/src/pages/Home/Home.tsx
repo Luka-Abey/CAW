@@ -7,6 +7,25 @@ const Home: React.FC = () => {
   return (
   <>
     <Wallpaper />
+
+    <div className="container my-container">
+      <div className="row my-row">
+        <div className="col-sm my-column">
+          Row 1Column one
+        </div>
+        <div className="col-sm my-column">
+          Row 1 Column two
+        </div>
+        <div className="col-sm my-column">
+          Row 1 Column three
+        </div>
+      </div>
+      <div className="row my-row">
+      <div className="col-sm my-column">
+          Row 2 column 1
+        </div>
+      </div>
+    </div>
     {/* ========================================================================================= */}
     <div className="main-content-container">
         <div className="info-wrapper ">
