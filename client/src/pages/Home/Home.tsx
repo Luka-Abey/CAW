@@ -30,7 +30,7 @@ const Home: React.FC = () => {
           <h2 className="custom-heading">Current Project</h2>
           <hr className="hr white"/>
           <div className="text-wrapper">
-            <p>Using the money raised from our shops, we are looking to fund a project idea to decorate and invigorate street sections cut off as part of the Active Travel Neighbourhoods initiative. These ideas are coming from the community and will be implemented by the community.</p>
+            <p>Using the money raised from our shops, we are looking to fund a project idea to decorate and invigorate street sections cut off as part of the Active Travel Neighbourhoods (ATN) initiative. These ideas are coming from the community and will be implemented by the community.</p>
           </div>
         </div>
 
@@ -128,7 +128,7 @@ const Home: React.FC = () => {
       </div>
       
       <div className="info-wrapper">
-        <h3 className="custom-heading">Our Take On ATN's</h3>
+        <h3 className="custom-heading">Our Take On ATNs</h3>
         <hr className="hr atn" />
         <div className="text-wrapper">
           <p>These planters have been controversial, we know. But we think they represent an opportunity to make the place we live better, so that people will be kinder to our streets and one another.
