@@ -148,7 +148,7 @@ const Home: React.FC = () => {
 
           <ul className="list-inline">
               <li className="list-inline-item">Phone Lily: 07498577571</li>
-              <li className="list-inline-item">Email: communityactionwaste@gmail.com</li>
+              <li className="list-inline-item">Email: <a href="mailto:communityactionwaste@gmail.com">communityactionwaste@gmail.com</a></li>
           </ul>
           <p className="copyright">Community Action On Waste © 2021</p>
         </footer>
