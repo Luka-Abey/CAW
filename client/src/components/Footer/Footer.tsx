@@ -16,7 +16,7 @@ const Footer: React.FC = () => (
             <p className="contact-us">Contact Us:</p>
 
             <ul className="list-inline">
-                <li className="list-inline-item">Phone Lily: 07498577571</li>
+                {/* <li className="list-inline-item">Phone Lily: 07498577571</li> */}
                 <li className="list-inline-item">Email: communityactionwaste@gmail.com</li>
             </ul>
             <p className="copyright">Community Action On Waste © 2021</p>
