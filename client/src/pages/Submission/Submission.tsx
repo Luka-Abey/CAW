@@ -1,8 +1,10 @@
 import React from 'react';
+import Footer from '../../components/Footer/Footer'
 
 const Submission: React.FC = () => (
   <div className="container">
-    <h1>Submission</h1>
+    
+    <Footer /> 
   </div>
 );
 

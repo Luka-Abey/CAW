@@ -1,6 +1,7 @@
 enum RouteConstants {
     Home = '/',
-    Submission = '/submission'
+    Submission = '/submission',
+    Feedback = '/feedback'
   }
   
   export default RouteConstants;
