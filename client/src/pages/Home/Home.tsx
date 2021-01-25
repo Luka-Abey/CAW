@@ -73,7 +73,7 @@ const Home: React.FC = () => {
         <div className="info-wrapper sub-text-submit">
           <h3 className="custom-heading-h3">Who Can Submit?</h3>
           <div className="text-wrapper">
-            <p>Anyone! If you have trouble using our website, or have trouble using Zoom (where we will be hosting two sessions to chat about ideas), please get in touch with us via text or email on:
+            <p>Anyone! If you have trouble using our website, or have trouble using Zoom (where we will be hosting two sessions to chat about ideas), please get in touch with us via email: communityactiononwaste@gmail.com 
             </p>
           </div>
         </div>    
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
             <p>This is a chance to raise awareness of your idea and to check out the ideas that are on the table. If you’ve got an idea, you get some time to talk about it and why it’s so great! If you’re interested in what others are thinking, you can ask some questions. 
             <br/>
             <br/>
-            Please sign up to these by emailing or texting us on:
+            Please sign up to these by emailing us via: communityactionwaste@gmail.com
             </p>
           </div>
         </div>
