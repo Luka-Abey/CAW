@@ -28,7 +28,7 @@ const Layout: React.FC = ({ children }) => {
         <li className="link-caw">SUBMIT AN IDEA</li>
       </Link>
       <Link to="/feedback">
-        <li className="link-caw">CURRENT IDEAS</li>
+        <li className="link-caw">SUBMITTED IDEAS</li>
       </Link>
     </ul>
     <div 

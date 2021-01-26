@@ -14,11 +14,11 @@ const Home: React.FC = () => {
         <h2 className="custom-heading">Who are C.A.W</h2>
         <hr className="hr" />
         <div className="text-wrapper-main">
-          <p>Community Action on Waste is a Leeds-based community co-operative, made up of local residents, students, and alumni. Every June, hundreds of tonnes of waste is left on the streets of Leeds by students moving house. The kinds of things left are exactly what incoming students will be buying new in September. We want to help put a stop to this unsustainable cycle of buying and throwing.
+          <p>Community Action on Waste is a Leeds-based community co-operative, made up of local residents, students, and alumni. Every June, hundreds of tonnes of waste is left on the streets of Leeds by students moving house. The kinds of things left are exactly what incoming students will be buying new in September. We want to help put a stop to this unsustainable cycle.
           <br/>
           <br/>
          {/* eslint-disable-next-line  */}
-          You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. We put a load of stuff donated by students in June into one of our members' basements. Then, we set up shop in September to give it back to students as they arrived in Leeds - pay as you feel. We raised over £250 and we’re very happy about this!
+          You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. With help from ‘The Big Clearout’, we managed to gather a load of stuff donated by students in June, and we put it in one of our members' basements for storage. Then, in September, we set up a series of pay-as-you-feel shops to the pre-loved goodies back to students as they arrived in Leeds. We raised over £250 in donations and we’re very happy about this!
           </p>
         </div>
       </div>
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           <h2 className="header custom-heading">Current Project</h2>
           <hr className="hr white"/>
           <div className="text-wrapper">
-            <p>Using the money raised from our shops, we are looking to fund a project idea to decorate and invigorate street sections cut off as part of the Active Travel Neighbourhoods (ATN) initiative. These ideas are coming from the community and will be implemented by the community.</p>
+            <p>Using the money raised from our shops, we are looking to fund a project idea to decorate and invigorate street sections cut off as part of the Active Travel Neighbourhoods (ATN) initiative. These ideas will be both designed and implemented by the community.</p>
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           <h3 className="header custom-heading-h3">What's the aim of this project?</h3>
           <div className="text-wrapper">
             <p>
-            We think that in order to put an end to the student waste lifecycle, a shift in behaviour and attitude needs to be implemented from the bottom up. The place we live in should be one we all care about. We can envision what goes on our streets together and we can make it a reality!
+            We think that in order to put an end to the waste lifecycle, a shift in behaviour and attitude needs to be implemented from the bottom up. The place we live in should be one we all care about. We believe that our community should be collectively empowered to reimagine our surroundings, and make these visions a tangible reality.
             <br/><br/>
             We encourage ideas that:
             </p>
@@ -56,9 +56,10 @@ const Home: React.FC = () => {
         <div className="info-wrapper sub-text-submit">
           <h3 className="custom-heading-h3">Submitting Your Idea</h3>
           <div className="text-wrapper">
-            <p>Please submit your idea before 20th February. You can do so on our website <a href="/submission">submit idea</a>, or by contacting one of our team. 
-            There is a template with questions to help you think about your idea in more detail, and you can check out our idea for clues. However if you find the template does not work for your idea, we will find a way to submit your idea - be that by video, or a diagram.
-            There is no need to come to the online sessions to submit your idea.
+            <p>Please submit your idea before 6th March. Anyone can <a href="/submission" >submit an idea</a> on our website using the online form. The form has questions to help you think about your idea in more detail, and you can also check out our example idea for inspiration. 
+            <br/>
+            <br/>
+            If you are struggling with using the template format, don’t worry! We will find a format that works for you – send us an email. You can also come to our online sessions to brainstorm your ideas and see what others are thinking.
             </p>
           </div>
         </div>
@@ -83,23 +84,23 @@ const Home: React.FC = () => {
           <h3 className="header custom-heading">Online Sessions</h3>
           <hr className="hr"/>
           <div className="text-wrapper">
-            <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way.
+            <p>Please come along to our online sessions where we’ll discuss the ideas people have in a friendly and relaxed way. These sessions are simply there to provide a platform for discussion and to help you formulate your ideas. But they are NOT compulsory.
             </p>
           </div>
         </div>
 
         <div className="info-wrapper sub-text">
-          <h3 className="header custom-heading-h3">30th Jan Coffee Morning Meetup</h3>
+          <h3 className="header custom-heading-h3">13th Feb Coffee Morning Meetup</h3>
           <div className="text-wrapper">
-            <p>Whether you have a burning idea or just want to get involved. We will discuss each other's ideas and have a friendly natter. If you are still a bit hazy about your idea then this is perfect for you as we can all help brainstorm together.
+            <p>Whether you have a burning idea or just want to get involved. We will discuss each other's ideas and have a friendly natter. If you are still a bit unsure about your idea then this is the perfect opportunity to brainstorm with others.
             </p>
           </div>
         </div>
 
         <div className="info-wrapper sub-text">
-          <h3 className="header custom-heading-h3">13th Feb Project Presentations</h3>
+          <h3 className="header custom-heading-h3">27th Feb Project Presentations</h3>
           <div className="text-wrapper">
-            <p>This is a chance to raise awareness of your idea and to check out the ideas that are on the table. If you’ve got an idea, you get some time to talk about it and why it’s so great! If you’re interested in what others are thinking, you can ask some questions. 
+            <p>This is a chance to present your idea and also to check out the other ideas on the table. You’ll have the chance to explain why your idea is so great. As well as this, you can ask and receive questions to get/give extra feedback and pointers for improvement.
             <br/>
             <br/>
             Please sign up to these by emailing us via: communityactionwaste@gmail.com
@@ -112,7 +113,7 @@ const Home: React.FC = () => {
           <hr className="hr winning"/>
         </div>
         <div className="text-wrapper">
-          <p>We will invite a panel of community leaders to vote on the winning idea based on a few factors: feedback, viability, budgeting, and how well it fulfils our aims.
+          <p>We will invite a panel of community leaders to vote on the winning idea based on a few factors: public feedback, viability, budgeting, and how well it fulfils our aims.
           </p>
         </div>
       </div>
@@ -120,7 +121,7 @@ const Home: React.FC = () => {
       <div className="info-wrapper sub-text">
         <h3 className="header custom-heading-h3">What will happen after the winner is decided?</h3>
         <div className="text-wrapper">
-          <p>We will ask volunteers to join a co-operative working group. The person who submitted the idea may well want to be a part of this! The group will work with a flat hierarchy to complete the project, and make decisions by consensus.
+          <p>We will ask volunteers to join a co-operative working group to make the idea a reality. The person who submitted the idea may well want to be a part of this! The group will work together to complete the project, and make decisions by consensus.
           </p>
         </div>
       </div>
