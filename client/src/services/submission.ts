@@ -2,7 +2,7 @@ import config from './config';
 
 class ExampleService {
   async getData(): Promise<any> {
-    const response = await fetch(`${config.baseUrl}/example`, {
+    const response = await fetch(`${config.baseUrl}`, {
       method: 'GET'
     });
 

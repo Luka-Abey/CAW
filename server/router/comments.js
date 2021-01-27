@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
     .then(comments => res.json(comments))
 });
 
+
 router.post('/', (req, res) => {
   const newComment = new Comment({
     user: req.body.user,

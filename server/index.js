@@ -39,3 +39,4 @@ app.use('/api/comments', comments)
 app.use('/api/submissions', submissions)
 
 app.listen(port, () => console.log(`Server started on port: ${port}`))
+
