@@ -16,7 +16,7 @@ html {
   position: relative;
   background: transparent;
   max-width: 100vw;
-  display:-webkit-flex;
+  display: -webkit-flex;
   display: -webkit-box;
   display: -moz-box;
   display: -moz-flex;
@@ -28,7 +28,7 @@ html {
   text-decoration: none;
 
   .nav-links-caw {
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -67,7 +67,7 @@ html {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $tablet) {
   body {
     overflow-x: hidden;
   }
@@ -89,14 +89,35 @@ html {
     transition: 0.5s ease-in-out;
   }
 
-  .link-caw li {
+  a {
+    // font-size: 10vw;
+  }
+
+  a .link-caw {
+    font-size: 2.5vw;
+  }
+  .link-caw {
     list-style-type: none;
-    text-align: right;
-    line-height: 75px;
+    text-align: center;
+    line-height: 25px;
+    // background-color: red;
   }
 
   .burger {
     display: block;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  a .link-caw {
+    font-size: 2vw;
+  }
+
+  .link-caw {
+    list-style-type: none;
+    text-align: center;
+    line-height: 25px;
+    // background-color: red;
   }
 }
 

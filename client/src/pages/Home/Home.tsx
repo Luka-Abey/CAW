@@ -13,7 +13,7 @@ const Home: React.FC = () => {
         <div className="info-wrapper ">
         <h2 className="custom-heading">Who are C.A.W</h2>
         <hr className="hr" />
-        <div className="text-wrapper-main">
+        <div className="text-wrapper text-wrapper-main">
           <p>Community Action on Waste is a Leeds-based community co-operative, made up of local residents, students, and alumni. Every June, hundreds of tonnes of waste is left on the streets of Leeds by students moving house. The kinds of things left are exactly what incoming students will be buying new in September. We want to help put a stop to this unsustainable cycle.
           <br/>
           <br/>

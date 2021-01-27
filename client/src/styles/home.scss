@@ -1,5 +1,5 @@
 .wallpaper-container {
-  display:-webkit-flex;
+  display: -webkit-flex;
   display: -webkit-box;
   display: -moz-box;
   display: -moz-flex;
@@ -17,7 +17,7 @@
   position: relative;
 
   .welcome-content {
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -31,7 +31,7 @@
 }
 
 .main-content-container {
-  display:-webkit-flex;
+  display: -webkit-flex;
   display: -webkit-box;
   display: -moz-box;
   display: -moz-flex;
@@ -55,7 +55,7 @@
 
   .background-wrapper {
     background-color: $light-green;
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -81,7 +81,7 @@
   }
 
   .text-wrapper {
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -99,7 +99,7 @@
   }
 
   .submitting-wrapper {
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -111,7 +111,7 @@
   }
 
   .text-wrapper-main {
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -144,7 +144,7 @@
   }
 
   .heading-wrapper {
-    display:-webkit-flex;
+    display: -webkit-flex;
     display: -webkit-box;
     display: -moz-box;
     display: -moz-flex;
@@ -221,6 +221,13 @@
       &.current-project {
         padding-bottom: 0px;
       }
+    }
+
+    .text-wrapper {
+      padding-right: 0px;
+      padding-left: 0px;
+      // width: 100%;
+      // height: 100%;
     }
   }
 
