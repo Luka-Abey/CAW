@@ -1,8 +1,9 @@
 import config from './config';
+import TSubmission from '../models/TSubmission';
 
-class SubmissionService {
-  async getSubmission(): Promise<any> {
-    const response = await fetch(`${config.baseUrl}/example`, {
+class FeedbackService {
+  async getSubmissions(): Promise<TSubmission[]> {
+    const response = await fetch(`${config.baseUrl}/submissions`, {
       method: 'GET'
     });
 
@@ -33,4 +34,4 @@ class SubmissionService {
   }
 }
 
-export default SubmissionService;
+export default FeedbackService;
