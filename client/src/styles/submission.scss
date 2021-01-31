@@ -1,12 +1,58 @@
 .submission-content {
   max-width: 100%;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 20px;
 
   h3 {
     padding-top: 25px;
+  }
+}
+
+.form-container {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submission-form {
+  background-color: $light-green;
+  width: 60%;
+  height: auto;
+  border-radius: 15px;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: left;
+  padding: 25px;
+  margin: 25px 0px;
+
+  .sub-label {
+    padding: 0px;
+    padding-bottom: 5px;
+    font-style: italic;
+  }
+  .text-area {
+    height: 125px;
+  }
+  label {
+    padding: 10px 0px;
+  }
+
+  button {
+    margin-top: 20px;
   }
 }

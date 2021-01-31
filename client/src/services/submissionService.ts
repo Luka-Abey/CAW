@@ -2,7 +2,7 @@ import config from './config';
 
 class ExampleService {
   async getData(): Promise<any> {
-    const response = await fetch(`${config.baseUrl}`, {
+    const response = await fetch(`${config.baseUrl}/example`, {
       method: 'GET'
     });
 
@@ -10,7 +10,7 @@ class ExampleService {
   }
 
   async addData(payload: any): Promise<boolean> {
-    const response = await fetch(`${config.baseUrl}/example`, {
+    const response = await fetch(`${config.baseUrl}/submissions`, {
       method: 'POST',
       body: JSON.stringify(payload)
     });
