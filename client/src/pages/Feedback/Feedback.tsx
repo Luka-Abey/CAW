@@ -7,7 +7,7 @@ import TSubmission from '../../models/TSubmission';
 const Feedback: React.FC = () => { 
   
   const fService = new FeedbackService;
-  const [results, setResults] = useState<Array<TSubmission>>();
+  const [results, setResults] = useState(new Array<TSubmission>());
   const [loading, setLoading] = useState(true);
 
   // on load 
@@ -18,8 +18,7 @@ const Feedback: React.FC = () => {
 
    const fetchSubmissions = async () => { 
       fService.getSubmissions().then(response => { 
-      const resultsArray = response;
-      setResults(resultsArray);
+      setResults(response);
       setLoading(false);
     });
   } 
@@ -31,11 +30,13 @@ const Feedback: React.FC = () => {
     <div className="feedback-content">
         <h1>No ideas have been submitted Yet:</h1>
         <h3>Please check back soon!</h3>
+      <hr/>
+    {/* <h3>SUBMISSIONS:</h3>
+    <hr/>
         <ol>
-          { loading ? <div>Loading...</div> : results?.map( request => 
-          <li>{request} </li>) }
-        </ol>
-
+          {results?.map((submission, index) => 
+          <li className="submission-item" key={index}>title: {submission.title} </li>) }
+        </ol> */}
     </div>
     <Footer /> 
   </> 

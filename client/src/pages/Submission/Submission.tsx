@@ -55,10 +55,8 @@ const Submission: React.FC = () => {
     <Wallpaper />
       <div className="submission-content">
           <h1>Submission Form Coming Soon</h1>
-          <h3>Please check back the week commencing:</h3>
-          <h3>25/01/2021</h3>
       </div>
-      <div className="form-container">
+      {/* <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -105,7 +103,7 @@ const Submission: React.FC = () => {
           </div>
           <button type="submit" className="btn btn-primary" >Submit</button>
         </form>
-      </div>
+      </div> */}
     <Footer /> 
   </>
   )
