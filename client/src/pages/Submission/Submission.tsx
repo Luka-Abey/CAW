@@ -19,6 +19,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
+    images: new File([], "Mock.zip", { type: 'application/zip' }) 
   });
   
   // a nice-to-have show filenames when selected + a way to remove a file. 
@@ -32,10 +33,23 @@ const Submission: React.FC = () => {
     setSubmission({ ...submission, [name]: value});
   }
 
+  const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => { 
+    const image = e.currentTarget;
+
+    // double check it's an image file
+
+  }
+
   // validate submissions & send off the submission.
   const handleSubmit = (e: React.FormEvent<EventTarget>): void => { 
     e.preventDefault();
     console.log(submission);
+
+    // send off image(s) file to imgur
+
+    // retrieve url(s) from imgur
+
+    // put url(s) from imgur inside an array
 
     sService.addSubmission(submission).then((request) => { setSubmission({title: "",
     description: "",
@@ -45,6 +59,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
+    
     });
   });
   }
@@ -56,7 +71,7 @@ const Submission: React.FC = () => {
       <div className="submission-content">
           <h1>Submission Form Coming Soon</h1>
       </div>
-      {/* <div className="form-container">
+      <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -99,11 +114,12 @@ const Submission: React.FC = () => {
           </div>
           <div className="form-check">
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
-            <input type="file" className="form-control-file" id="fileInput" multiple accept="image/*"/>
+
+            <input type="file" className="form-control-file" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*"/>
           </div>
           <button type="submit" className="btn btn-primary" >Submit</button>
         </form>
-      </div> */}
+      </div>
     <Footer /> 
   </>
   )
