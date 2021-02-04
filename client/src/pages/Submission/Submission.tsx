@@ -52,9 +52,9 @@ const Submission: React.FC = () => {
     // retrieve url(s) from imgur
     const URL = await resCloudinary.json()
     const imageURL = URL.secure_url
+    imageArray.push(imageURL)
     setLoading(false)
     // put url(s) from imgur inside an array
-    imageArray.push(imageURL)
   }
   
   // validate submissions & send off the submission.
