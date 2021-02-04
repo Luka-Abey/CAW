@@ -7,8 +7,7 @@ import TSubmission from '../../models/TSubmission';
 const Submission: React.FC = () => {
   const sService = new submissionService;
 
-
-  // const [count, setCount] = useState(0);
+  const [loading, setLoading] = useState(false)
 
   const [submission, setSubmission] = useState<TSubmission>({
     title: "",
@@ -19,7 +18,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
-    images: new File([], "Mock.zip", { type: 'application/zip' }) 
+    image: ""
   });
   
   // a nice-to-have show filenames when selected + a way to remove a file. 
@@ -33,23 +32,33 @@ const Submission: React.FC = () => {
     setSubmission({ ...submission, [name]: value});
   }
 
-  const handleImage = (e: React.ChangeEvent<HTMLInputElement>) => { 
-    const image = e.currentTarget;
-
-    // double check it's an image file
-
+  // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
+  const handleImage = async (e: any) => {
+    const imageFile = e.target.files[0];
+    setLoading(true)
+    const cloudinaryData = new FormData();
+    cloudinaryData.append('file', imageFile);
+    cloudinaryData.append('upload_preset', 'communityactiononwaste');
+    // send off image(s) file to imgur
+    const resCloudinary = await fetch(
+      'https://api.cloudinary.com/v1_1/dura1eemm/image/upload',
+      {
+        method: 'POST',
+        body: cloudinaryData
+      }
+    )
+    // retrieve url(s) from imgur
+    const URL = await resCloudinary.json()
+    const imageURL = URL.secure_url
+    setSubmission({ ...submission, image: imageURL})
+    setLoading(false)
+    // put url(s) from imgur inside an array
   }
 
   // validate submissions & send off the submission.
   const handleSubmit = (e: React.FormEvent<EventTarget>): void => { 
     e.preventDefault();
     console.log(submission);
-
-    // send off image(s) file to imgur
-
-    // retrieve url(s) from imgur
-
-    // put url(s) from imgur inside an array
 
     sService.addSubmission(submission).then((request) => { setSubmission({title: "",
     description: "",
@@ -59,7 +68,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
-    
+    image: ""
     });
   });
   }
@@ -116,6 +125,9 @@ const Submission: React.FC = () => {
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
 
             <input type="file" className="form-control-file" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*"/>
+          </div>
+          <div>
+            {loading ? (<h3>Loading image...</h3>) : <h3/>}
           </div>
           <button type="submit" className="btn btn-primary" >Submit</button>
         </form>
