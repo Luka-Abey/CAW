@@ -7,7 +7,7 @@ export type SendSubmissionType = {
     costs?: string;
     maintenance?: string;
     other?: string;
-    image?: string;
+    image?: Array<string>;
   }
 
 export default SendSubmissionType;

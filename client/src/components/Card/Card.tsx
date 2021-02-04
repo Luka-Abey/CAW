@@ -15,7 +15,7 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
             <div className="card mb-3">
                 <div className="row">
                 <div className="col-sm-12 col-md-4 ">
-                    <img className="img-fluid" src={imageUrl} alt="Card image cap" />
+                    <img className="img-fluid" src={imageUrl} alt={imageUrl} />
                 </div>
                 <div className="col-sm-12 col-md-8">
                     <div className="card-body">

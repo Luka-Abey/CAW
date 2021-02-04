@@ -17,7 +17,7 @@ const Feedback: React.FC = () => {
 
 
    const fetchSubmissions = async () => { 
-      fService.getSubmissions().then(response => { 
+      await fService.getSubmissions().then(response => { 
       setResults(response);
       setLoading(false);
     });
@@ -34,18 +34,9 @@ const Feedback: React.FC = () => {
     </div> 
 
     <ul className="submission-list">
-      {results?.map((submission, index) => 
-        <Card key={index} title={submission.title} description={submission.description} imageUrl="https://imgur.com/TPR7to7.jpg" submissionId={1234556}/>
-      )}
-    </ul>
-    <ul className="submission-list">
-      {results?.map((submission, index) => 
-        <Card key={index} title={submission.title} description={submission.description} imageUrl="https://imgur.com/9VRZiK6.jpg" submissionId={1234556}/>
-      )}
-    </ul>
-    <ul className="submission-list">
-      {results?.map((submission, index) => 
-        <Card key={index} title={submission.title} description={submission.description} imageUrl="https://imgur.com/HLC5NI0.jpg" submissionId={1234556}/>
+      {
+      results?.map((submission, index) => 
+        <Card key={index} title={submission.title} description={submission.description} imageUrl={submission.image == undefined || submission.image.length < 1 ?  "https://imgur.com/n5VyLq2.png" : submission.image[0]} submissionId={1234556}/>
       )}
     </ul>
 

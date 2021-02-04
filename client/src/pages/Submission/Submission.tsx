@@ -18,7 +18,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
-    image: ""
+    image: []
   });
   
   // a nice-to-have show filenames when selected + a way to remove a file. 
@@ -68,7 +68,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
-    image: ""
+    image: []
     });
   });
   }
