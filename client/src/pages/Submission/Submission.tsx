@@ -67,7 +67,8 @@ const Submission: React.FC = () => {
   
   // validate submissions & send off the submission.
   const handleSubmit = async (e: React.FormEvent<EventTarget>) => { 
-
+    e.preventDefault();
+    
     for (let index = 0; index < imageArray.length; index++) {
       await uploadFile(imageArray[index]);
     }
@@ -86,8 +87,9 @@ const Submission: React.FC = () => {
     <Wallpaper />
       <div className="submission-content">
           <h1>Submission Form Coming Soon</h1>
+          <h2>Please check back later this week! :-)</h2>
       </div>
-      <div className="form-container">
+      {/* <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -138,7 +140,7 @@ const Submission: React.FC = () => {
           </div>
           <button type="submit" className="btn btn-primary" >Submit</button>
         </form>
-      </div>
+      </div> */}
     <Footer /> 
   </>
   )
