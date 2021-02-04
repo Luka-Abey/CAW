@@ -39,7 +39,6 @@ const Submission: React.FC = () => {
     const cloudinaryData = new FormData();
     cloudinaryData.append('file', imageFile);
     cloudinaryData.append('upload_preset', 'communityactiononwaste');
-    console.log("handling image")
     // send off image(s) file to imgur
     const resCloudinary = await fetch(
       'https://api.cloudinary.com/v1_1/dura1eemm/image/upload',
@@ -51,7 +50,6 @@ const Submission: React.FC = () => {
     // retrieve url(s) from imgur
     const URL = await resCloudinary.json()
     const imageURL = URL.secure_url
-    console.log(imageURL)
     setSubmission({ ...submission, image: imageURL})
     setLoading(false)
     // put url(s) from imgur inside an array
