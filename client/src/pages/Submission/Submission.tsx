@@ -9,6 +9,8 @@ const Submission: React.FC = () => {
 
   const [loading, setLoading] = useState(false)
 
+  let imageArray:string[] = []
+
   const [submission, setSubmission] = useState<TSubmission>({
     title: "",
     description: "",
@@ -18,7 +20,7 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
-    image: ""
+    image: []
   });
   
   // a nice-to-have show filenames when selected + a way to remove a file. 
@@ -50,27 +52,29 @@ const Submission: React.FC = () => {
     // retrieve url(s) from imgur
     const URL = await resCloudinary.json()
     const imageURL = URL.secure_url
-    setSubmission({ ...submission, image: imageURL})
     setLoading(false)
     // put url(s) from imgur inside an array
+    imageArray.push(imageURL)
   }
-
+  
   // validate submissions & send off the submission.
   const handleSubmit = (e: React.FormEvent<EventTarget>): void => { 
     e.preventDefault();
+    setSubmission({ ...submission, image: imageArray})
     console.log(submission);
 
-    sService.addSubmission(submission).then((request) => { setSubmission({title: "",
-    description: "",
-    benefit: "",
-    contribution: "",
-    skills: "",
-    costs: "",
-    maintenance: "",
-    other: "",
-    image: ""
+      sService.addSubmission(submission).then((request) => { setSubmission({
+        title: "",
+        description: "",
+        benefit: "",
+        contribution: "",
+        skills: "",
+        costs: "",
+        maintenance: "",
+        other: "",
+        image: []
+      });
     });
-  });
   }
   
 
