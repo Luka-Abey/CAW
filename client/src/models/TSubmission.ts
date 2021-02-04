@@ -7,7 +7,7 @@ export type SubmissionType = {
     costs?: string;
     maintenance?: string;
     other?: string;
-    images?: File;
+    image?: string;
   }
 
 export default SubmissionType;
