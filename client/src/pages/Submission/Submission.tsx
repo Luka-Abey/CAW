@@ -5,10 +5,13 @@ import submissionService from '../../services/submissionService';
 import TSubmission from '../../models/TSubmission';
 
 const Submission: React.FC = () => {
+
   const sService = new submissionService;
 
   const [loading, setLoading] = useState(false)
-
+  const [imageArray, setImageArray] = useState(new Array<String>());
+  const [urlArray, setUrlArray] = useState(new Array<String>());
+  
   const [submission, setSubmission] = useState<TSubmission>({
     title: "",
     description: "",
@@ -18,10 +21,10 @@ const Submission: React.FC = () => {
     costs: "",
     maintenance: "",
     other: "",
-    image: ""
+    image: []
   });
   
-  // a nice-to-have show filenames when selected + a way to remove a file. 
+  // nice-to-have show filenames when selected + a way to remove a file. 
   const handleInputText = (e: React.FormEvent<HTMLInputElement>) => {
     const {value, name} = e.currentTarget;  
     setSubmission({ ...submission, [name]: value});
@@ -32,14 +35,13 @@ const Submission: React.FC = () => {
     setSubmission({ ...submission, [name]: value});
   }
 
-  // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
-  const handleImage = async (e: any) => {
-    const imageFile = e.target.files[0];
-    setLoading(true)
+  // upload files to cloudinary, return url
+  const uploadFile = async (file: any): Promise<string> => {
+    console.log("inside uploadFile");
     const cloudinaryData = new FormData();
-    cloudinaryData.append('file', imageFile);
+    cloudinaryData.append('file', file);
     cloudinaryData.append('upload_preset', 'communityactiononwaste');
-    // send off image(s) file to imgur
+    // send off image file
     const resCloudinary = await fetch(
       'https://api.cloudinary.com/v1_1/dura1eemm/image/upload',
       {
@@ -47,30 +49,36 @@ const Submission: React.FC = () => {
         body: cloudinaryData
       }
     )
-    // retrieve url(s) from imgur
+    // retrieve url
     const URL = await resCloudinary.json()
-    const imageURL = URL.secure_url
-    setSubmission({ ...submission, image: imageURL})
-    setLoading(false)
-    // put url(s) from imgur inside an array
+    const imageURL = URL.secure_url 
+
+    // put url(s) from imgur inside a state array
+    let tempArray = urlArray;
+    tempArray.push(imageURL);
+    setUrlArray(tempArray); 
+    return "done";
   }
 
+  // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
+  const handleImage = async (e: any) => {
+    setImageArray(e.target.files);
+  }
+  
   // validate submissions & send off the submission.
-  const handleSubmit = (e: React.FormEvent<EventTarget>): void => { 
+  const handleSubmit = async (e: React.FormEvent<EventTarget>) => { 
     e.preventDefault();
-    console.log(submission);
 
-    sService.addSubmission(submission).then((request) => { setSubmission({title: "",
-    description: "",
-    benefit: "",
-    contribution: "",
-    skills: "",
-    costs: "",
-    maintenance: "",
-    other: "",
-    image: ""
-    });
-  });
+    for (let index = 0; index < imageArray.length; index++) {
+      await uploadFile(imageArray[index]);
+    }
+
+    console.log("urlArray length: " + urlArray.length);
+    console.log(urlArray);
+    setSubmission({ ...submission, image: urlArray})
+    
+    console.log("send submission");
+    sService.addSubmission(submission);
   }
   
 
