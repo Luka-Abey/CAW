@@ -9,7 +9,8 @@ const Submission: React.FC = () => {
 
   const [loading, setLoading] = useState(false)
 
-  let imageArray:string[] = []
+  // array of image URLs
+  let imageArray = new Array<String>()  
 
   const [submission, setSubmission] = useState<TSubmission>({
     title: "",
@@ -34,14 +35,12 @@ const Submission: React.FC = () => {
     setSubmission({ ...submission, [name]: value});
   }
 
-  // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
-  const handleImage = async (e: any) => {
-    const imageFile = e.target.files[0];
-    setLoading(true)
+  // upload files to cloudinary, return url
+  const uploadFile = async (file: any) => {
     const cloudinaryData = new FormData();
-    cloudinaryData.append('file', imageFile);
+    cloudinaryData.append('file', file);
     cloudinaryData.append('upload_preset', 'communityactiononwaste');
-    // send off image(s) file to imgur
+    // send off image file
     const resCloudinary = await fetch(
       'https://api.cloudinary.com/v1_1/dura1eemm/image/upload',
       {
@@ -49,17 +48,36 @@ const Submission: React.FC = () => {
         body: cloudinaryData
       }
     )
-    // retrieve url(s) from imgur
+    // retrieve url
     const URL = await resCloudinary.json()
-    const imageURL = URL.secure_url
-    imageArray.push(imageURL)
-    setLoading(false)
+    const imageURL = URL.secure_url 
     // put url(s) from imgur inside an array
+    imageArray.push(imageURL)   
+    console.log(imageArray)
+  }
+  
+  const forEachFile = (filesList: any) => {
+    [...filesList].forEach((file: any) => {
+        uploadFile(file)
+      });
+  }
+  // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
+  const handleImage = async (e: any) => {
+    const imageFile = e.target.files;
+    setLoading(true)
+    forEachFile(imageFile)
+    setLoading(false)
   }
   
   // validate submissions & send off the submission.
   const handleSubmit = (e: React.FormEvent<EventTarget>): void => { 
     e.preventDefault();
+    // can call handleImage in here: but need make it work async. At the moment there are problems waiting for the cloudinary server.
+    // for now it is still being called in the onChange, as this negates some of the cloudinary waiting problems.
+
+
+    // only sends the imageArray the SECOND time the submit button is pressed....
+
     setSubmission({ ...submission, image: imageArray})
     console.log(submission);
 
