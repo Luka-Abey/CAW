@@ -1,5 +1,5 @@
 import config from './config';
-import TSubmission from '../models/TSubmission';
+import TSubmission from '../models/SendSubmissionType';
 
 class FeedbackService {
   async getSubmissions(): Promise<TSubmission[]> {

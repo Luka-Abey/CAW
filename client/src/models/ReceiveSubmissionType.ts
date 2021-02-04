@@ -1,4 +1,4 @@
-export type SubmissionType = {
+export type ReceiveSubmissionType = {
     title: string;
     description?: string;
     benefit?: string;
@@ -7,7 +7,7 @@ export type SubmissionType = {
     costs?: string;
     maintenance?: string;
     other?: string;
-    images?: File;
+    images?: Array<string>;
   }
 
-export default SubmissionType;
+export default ReceiveSubmissionType;

@@ -2,7 +2,7 @@ import React,  { useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Wallpaper from '../../components/Wallpaper/Wallpaper';
 import submissionService from '../../services/submissionService';
-import TSubmission from '../../models/TSubmission';
+import TSubmission from '../../models/SendSubmissionType';
 
 const Submission: React.FC = () => {
   const sService = new submissionService;

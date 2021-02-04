@@ -1,0 +1,23 @@
+.card {
+  width: 75%;
+  height: auto;
+  border: 0.5px solid rgba(128, 128, 128, 0.37);
+
+  .img-fluid {
+    width: 250xp;
+    height: 250px;
+    object-fit: contain;
+  }
+  .card-body {
+    padding: 2rem;
+    height: 100%;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    padding: 1rem 0;
+  }
+}
