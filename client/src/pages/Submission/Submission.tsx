@@ -5,13 +5,13 @@ import submissionService from '../../services/submissionService';
 import TSubmission from '../../models/TSubmission';
 
 const Submission: React.FC = () => {
+
   const sService = new submissionService;
 
   const [loading, setLoading] = useState(false)
-
-  // array of image URLs
-  let imageArray = new Array<String>()  
-
+  const [imageArray, setImageArray] = useState(new Array<String>());
+  const [urlArray, setUrlArray] = useState(new Array<String>());
+  
   const [submission, setSubmission] = useState<TSubmission>({
     title: "",
     description: "",
@@ -24,7 +24,7 @@ const Submission: React.FC = () => {
     image: []
   });
   
-  // a nice-to-have show filenames when selected + a way to remove a file. 
+  // nice-to-have show filenames when selected + a way to remove a file. 
   const handleInputText = (e: React.FormEvent<HTMLInputElement>) => {
     const {value, name} = e.currentTarget;  
     setSubmission({ ...submission, [name]: value});
@@ -36,7 +36,8 @@ const Submission: React.FC = () => {
   }
 
   // upload files to cloudinary, return url
-  const uploadFile = async (file: any) => {
+  const uploadFile = async (file: any): Promise<string> => {
+    console.log("inside uploadFile");
     const cloudinaryData = new FormData();
     cloudinaryData.append('file', file);
     cloudinaryData.append('upload_preset', 'communityactiononwaste');
@@ -51,48 +52,33 @@ const Submission: React.FC = () => {
     // retrieve url
     const URL = await resCloudinary.json()
     const imageURL = URL.secure_url 
-    // put url(s) from imgur inside an array
-    imageArray.push(imageURL)   
-    console.log(imageArray)
+
+    // put url(s) from imgur inside a state array
+    let tempArray = urlArray;
+    tempArray.push(imageURL);
+    setUrlArray(tempArray); 
+    return "done";
   }
-  
-  const forEachFile = (filesList: any) => {
-    [...filesList].forEach((file: any) => {
-        uploadFile(file)
-      });
-  }
+
   // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
   const handleImage = async (e: any) => {
-    const imageFile = e.target.files;
-    setLoading(true)
-    forEachFile(imageFile)
-    setLoading(false)
+    setImageArray(e.target.files);
   }
   
   // validate submissions & send off the submission.
-  const handleSubmit = (e: React.FormEvent<EventTarget>): void => { 
+  const handleSubmit = async (e: React.FormEvent<EventTarget>) => { 
     e.preventDefault();
-    // can call handleImage in here: but need make it work async. At the moment there are problems waiting for the cloudinary server.
-    // for now it is still being called in the onChange, as this negates some of the cloudinary waiting problems.
 
+    for (let index = 0; index < imageArray.length; index++) {
+      await uploadFile(imageArray[index]);
+    }
 
-    // only sends the imageArray the SECOND time the submit button is pressed....
-
-    setSubmission({ ...submission, image: imageArray})
-    console.log(submission);
-
-      sService.addSubmission(submission).then((request) => { setSubmission({
-        title: "",
-        description: "",
-        benefit: "",
-        contribution: "",
-        skills: "",
-        costs: "",
-        maintenance: "",
-        other: "",
-        image: []
-      });
-    });
+    console.log("urlArray length: " + urlArray.length);
+    console.log(urlArray);
+    setSubmission({ ...submission, image: urlArray})
+    
+    console.log("send submission");
+    sService.addSubmission(submission);
   }
   
 
