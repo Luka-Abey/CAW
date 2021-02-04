@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 interface Props { 
@@ -31,3 +32,5 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
 };
 
 export default Card;
+
+
