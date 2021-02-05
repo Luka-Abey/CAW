@@ -76,7 +76,7 @@ const Submission: React.FC = () => {
     console.log("urlArray length: " + urlArray.length);
     console.log(urlArray);
     setSubmission({ ...submission, image: urlArray})
-    
+
     console.log("send submission");
     sService.addSubmission(submission);
   }
@@ -89,7 +89,7 @@ const Submission: React.FC = () => {
           <h1>Submission Form Coming Soon</h1>
           <h2>Please check back later this week! :-)</h2>
       </div>
-      {/* <div className="form-container">
+      <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -140,7 +140,7 @@ const Submission: React.FC = () => {
           </div>
           <button type="submit" className="btn btn-primary" >Submit</button>
         </form>
-      </div> */}
+      </div>
     <Footer /> 
   </>
   )
