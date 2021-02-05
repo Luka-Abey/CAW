@@ -2,14 +2,9 @@
 
 Website for Community Action on Waste project.
 
-To feature functionality for uploading project ideas for low carbon neighbourhoods, via a form stating:
+Features functionality for submitting project ideas for low traffic neighbourhoods.
 
-- Name (optional)
-- Idea
-- Funding requirements/estimations
-
-Others can comment on these ideas, which get read from the db on a separate page with:
-Questions/clarifications/support for ideas
+Others can comment on these ideas with questions/clarifications/support, on a discussion page.
 
 ## Install & Run Locally:
 
@@ -42,6 +37,8 @@ You will also see any lint errors in the console.
 
 ## Built with
 React, TypeScript, Node, Express, MongoDB, Mocha, Chai.
+
+Backend code accessible [here](https://github.com/Luka-Abey/community-action-on-waste-server)
 
 ## Contributions
 
