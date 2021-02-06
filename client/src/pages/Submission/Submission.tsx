@@ -87,7 +87,7 @@ const Submission: React.FC = () => {
       // check regex in here
       const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.xbm|\.tif|\.ico|\.svg|\.webp|\.pjpeg|\.avif)$/i; 
       if (!allowedExtensions.exec(file.name)) {
-        alert("Invalid file type provided, please try again")
+        alert("Invalid file type provided, please try again and click Choose Files")
         file = null
       }
       else {
