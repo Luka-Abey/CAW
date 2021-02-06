@@ -24,7 +24,7 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         { (description.length > MAX_LENGTH) ? 
-                            <p className="card-text text-secondary">{description.substring(0, MAX_LENGTH)}</p>
+                            <p className="card-text text-secondary">{description.substring(0, MAX_LENGTH) + "..."}</p>
                          : <p className="card-text text-secondary">{description}</p> }
                         {/* <p className="card-text text-secondary ">{description}</p> */}
                         <hr/>
