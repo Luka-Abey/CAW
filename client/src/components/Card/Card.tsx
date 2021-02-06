@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 
 interface Props { 
     title: string;
-    description?: string;
-    imageUrl?: string;
+    description: string;
+    imageUrl: string;
     submissionId: string;
 }
+
+const MAX_LENGTH = 200;
 
 const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) => { 
 
@@ -21,7 +23,10 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
                 <div className="col-sm-12 col-md-8">
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
-                        <p className="card-text text-secondary ">{description}</p>
+                        { (description.length > MAX_LENGTH) ? 
+                            <p className="card-text text-secondary">{description.substring(0, MAX_LENGTH)}</p>
+                         : <p className="card-text text-secondary">{description}</p> }
+                        {/* <p className="card-text text-secondary ">{description}</p> */}
                         <hr/>
                        <Link to={"submissions/" + submissionId}>  <a className="btn btn-outline-success">View Submission</a></Link>
                     </div>
