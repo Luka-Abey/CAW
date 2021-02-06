@@ -140,46 +140,45 @@ const Submission: React.FC = () => {
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
-              <label >Submission Name</label>
-              <input type="text" className="form-control" placeholder="e.g. The Green Space" required name="title" onChange={handleInputText} value={submission.title}/>
+              <label >Submission Name (max 20 words)</label>
+              <input type="text" className="form-control" maxLength={130} placeholder="e.g. The Green Space" required name="title" onChange={handleInputText} value={submission.title}/>
               <div className="invalid-feedback">
                 Please choose a name of your submission.
               </div>
             </div>
             <div className="form-group">
-              <label >In a few sentences, please explain your idea</label>
-              <textarea className="form-control text-area" required name="description" onChange={handleTextArea} value={submission.description}/>
+              <label >In a few sentences, please explain your idea (max 200 words)</label>
+              <textarea className="form-control text-area" maxLength={3000} required name="description" onChange={handleTextArea} value={submission.description}/>
             </div>
             <div className="form-group">
-              <label >Who would benefit from your idea?</label>
-              <textarea className="form-control text-area" name="benefit" onChange={handleTextArea} value={submission.benefit}></textarea>
+              <label >Who would benefit from your idea? (max 200 words)</label>
+              <textarea className="form-control text-area" maxLength={3000} name="benefit" onChange={handleTextArea} value={submission.benefit}></textarea>
             </div>
             <div className="form-group">
-              <label >How will your idea make a positive contribution to the Hyde park area?</label>
-              <textarea className="form-control text-area" name="contribution" onChange={handleTextArea} value={submission.contribution}></textarea>
+              <label >How will your idea make a positive contribution to the Hyde park area? (max 200 words)</label>
+              <textarea className="form-control text-area" maxLength={3000} name="contribution" onChange={handleTextArea} value={submission.contribution}></textarea>
             </div>          
             <div className="form-group">
-              <label >Are there any practical skills needed to implement your idea?</label>
-              <textarea className="form-control text-area" name="skills" onChange={handleTextArea} value={submission.skills}></textarea>
+              <label >Are there any practical skills needed to implement your idea? (max 200 words)</label>
+              <textarea className="form-control text-area" maxLength={3000} name="skills" onChange={handleTextArea} value={submission.skills}></textarea>
             </div>          
             <div className="form-group">
-              <label >Outline the rough costs for your idea - how will it fit into the £250 budget?</label>
+              <label >Outline the rough costs for your idea - how will it fit into the £250 budget? (max 200 words)</label>
               <label className="sub-label">No need to be exact, just a rough estimate will do</label>
-              <textarea className="form-control text-area" placeholder="" name="costs" onChange={handleTextArea} value={submission.costs}></textarea>
+              <textarea className="form-control text-area" maxLength={3000} placeholder="" name="costs" onChange={handleTextArea} value={submission.costs}></textarea>
             </div>          
             <div className="form-group">
-              <label >Will it need maintenance? If so, how might this happen?</label>
-              <textarea className="form-control text-area" name="maintenance" onChange={handleTextArea} value={submission.maintenance}></textarea>
+              <label >Will it need maintenance? If so, how might this happen? (max 200 words)</label>
+              <textarea className="form-control text-area" maxLength={3000} name="maintenance" onChange={handleTextArea} value={submission.maintenance}></textarea>
             </div>          
             <div className="form-group">
-              <label >Is there anything else to consider?</label>
-              <textarea className="form-control text-area" name="other" onChange={handleTextArea} value={submission.other}></textarea>
+              <label >Is there anything else to consider? (max 200 words)</label>
+              <textarea className="form-control text-area" maxLength={3000} name="other" onChange={handleTextArea} value={submission.other}></textarea>
             </div>   
             
           </div>
           <div className="form-check">
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
-
             <input type="file" className="form-control-file" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
           </div>
           <div>
