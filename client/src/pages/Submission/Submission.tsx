@@ -82,8 +82,26 @@ const Submission: React.FC = () => {
 
   // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
   const handleImage = async (e: any) => {
-    setImageArray(e.target.files);
+    const initialFileUpload = e.target.files;
+    [...initialFileUpload].forEach((file: any) => {
+      // check regex in here
+      const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.xbm|\.tif|\.ico|\.svg|\.webp|\.pjpeg|\.avif)$/i; 
+      if (!allowedExtensions.exec(file.name)) {
+        alert("Invalid file type provided, please try again and click Choose Files")
+        file = null
+      }
+      else {
+        setImageArray(initialFileUpload);
+      }
+      console.log(file)
+    });
   }
+  
+  // const handleImageProper = async (e: React.ChangeEvent<FileList>) => {
+  //   console.log(e.currentTarget.item);
+  //   console.log(e.currentTarget.item(0));
+  //   setImageArray(e.currentTarget);
+  // }
   
   const resetImage = () => { 
     let randomString = Math.random().toString(36);
