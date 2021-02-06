@@ -1,8 +1,8 @@
 import config from './config';
-import TSubmission from '../models/SendSubmissionType';
+import ReceiveSubmissionType from '../models/ReceiveSubmissionType';
 
 class FeedbackService {
-  async getSubmissions(): Promise<TSubmission[]> {
+  async getSubmissions(): Promise<ReceiveSubmissionType[]> {
     const response = await fetch(`${config.baseUrl}/submissions`, {
       method: 'GET'
     });

@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props { 
     title: string;
     description?: string;
     imageUrl?: string;
-    submissionId: number;
+    submissionId: string;
 }
 
 const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) => { 
@@ -22,7 +23,7 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text text-secondary ">{description}</p>
                         <hr/>
-                        <a href="#" className="btn btn-outline-success">View Submission</a>
+                       <Link to={"submissions/" + submissionId}>  <a className="btn btn-outline-success">View Submission</a></Link>
                     </div>
                 </div>
                 </div>

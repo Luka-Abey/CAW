@@ -9,7 +9,8 @@ class SubmissionService {
     return response.ok ? response.json() : null;
   }
 
-  async addSubmission(payload: any): Promise<boolean> {
+  async postSubmission(payload: any): Promise<boolean> {
+    console.log(payload);
     const response = await fetch(`${config.baseUrl}/submissions`, {
       mode: 'cors',
       headers: {

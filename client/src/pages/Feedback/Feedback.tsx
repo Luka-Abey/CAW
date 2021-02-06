@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Wallpaper from '../../components/Wallpaper/Wallpaper';
 import FeedbackService from '../../services/feedbackService';
-import TSubmission from '../../models/SendSubmissionType';
+import ReceiveSubmissionType from '../../models/ReceiveSubmissionType';
 import Card from '../../components/Card/Card';
 const Feedback: React.FC = () => { 
   
   const fService = new FeedbackService;
-  const [results, setResults] = useState(new Array<TSubmission>());
+  const [results, setResults] = useState(new Array<ReceiveSubmissionType>());
   const [loading, setLoading] = useState(true);
 
   // on load 
@@ -17,10 +17,10 @@ const Feedback: React.FC = () => {
 
 
    const fetchSubmissions = async () => { 
-      await fService.getSubmissions().then(response => { 
+      await fService.getSubmissions().then(response => {
       setResults(response);
       setLoading(false);
-    });
+    })
   } 
 
 
@@ -36,7 +36,7 @@ const Feedback: React.FC = () => {
     <ul className="submission-list">
       {
       results?.map((submission, index) => 
-        <Card key={index} title={submission.title} description={submission.description} imageUrl={submission.image == undefined || submission.image.length < 1 ?  "https://imgur.com/n5VyLq2.png" : submission.image[0]} submissionId={1234556}/>
+        <Card key={index} title={submission.title} description={submission.description} imageUrl={submission.image == undefined || submission.image.length < 1 ?  "https://imgur.com/n5VyLq2.png" : submission.image[0]} submissionId={submission._id}/>
       )}
     </ul>
 

@@ -7,7 +7,8 @@ export type ReceiveSubmissionType = {
     costs?: string;
     maintenance?: string;
     other?: string;
-    images?: Array<string>;
+    image?: Array<string>;
+    _id: string;
   }
 
 export default ReceiveSubmissionType;
