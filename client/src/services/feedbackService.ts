@@ -10,6 +10,14 @@ class FeedbackService {
     return response.ok ? response.json() : null;
   }
 
+  async getSubmissionById(submissionId: string): Promise<ReceiveSubmissionType> {
+    const response = await fetch(`${config.baseUrl}/submissions/${submissionId}`, {
+      method: 'GET'
+    });
+
+    return response.ok ? response.json() : null;
+  }
+
   async addSubmission(payload: any): Promise<boolean> {
     const response = await fetch(`${config.baseUrl}/submissions`, {
       mode: 'cors',

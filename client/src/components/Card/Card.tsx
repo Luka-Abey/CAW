@@ -1,8 +1,16 @@
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 
-interface Props { 
+
+// Type whatever you expect in 'props.match.params.*'
+type PathParamsType = {
+    submissionId: string,
+}
+
+// Your component own properties
+type PropsType = RouteComponentProps<PathParamsType> & {
     title: string;
     description: string;
     imageUrl: string;
@@ -11,7 +19,7 @@ interface Props {
 
 const MAX_LENGTH = 200;
 
-const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) => { 
+const Card: React.FC<PropsType> = ( {title, description, imageUrl, submissionId} ) => { 
 
     return (
         <> 
@@ -26,9 +34,8 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
                         { (description.length > MAX_LENGTH) ? 
                             <p className="card-text text-secondary">{description.substring(0, MAX_LENGTH) + "..."}</p>
                          : <p className="card-text text-secondary">{description}</p> }
-                        {/* <p className="card-text text-secondary ">{description}</p> */}
                         <hr/>
-                       <Link to={"submissions/" + submissionId}>  <a className="btn btn-outline-success">View Submission</a></Link>
+                       <Link  className="btn btn-outline-success" to={{ pathname: `/submissions/${submissionId}` }}>View Submission</Link>
                     </div>
                 </div>
                 </div>
@@ -37,6 +44,6 @@ const Card: React.FC<Props> = ( { title, description, imageUrl, submissionId} ) 
     ) 
 };
 
-export default Card;
+export default withRouter(Card);
 
 

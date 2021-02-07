@@ -108,15 +108,9 @@ const Submission: React.FC = () => {
     });
   }
   
-  // const handleImageProper = async (e: React.ChangeEvent<FileList>) => {
-  //   console.log(e.currentTarget.item);
-  //   console.log(e.currentTarget.item(0));
-  //   setImageArray(e.currentTarget);
-  // }
-  
   const resetImage = () => { 
     let randomString = Math.random().toString(36);
-    setKey( randomString);
+    setKey(randomString);
   }
 
   // validate submissions & send off the submission.
