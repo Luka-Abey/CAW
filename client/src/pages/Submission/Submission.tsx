@@ -87,7 +87,11 @@ const Submission: React.FC = () => {
       // check regex in here
       const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.xbm|\.tif|\.ico|\.svg|\.webp|\.pjpeg|\.avif)$/i; 
       if (!allowedExtensions.exec(file.name)) {
-        alert("Invalid file type provided, please try again and click Choose Files")
+        alert("Invalid file type provided. Please try again and click Choose Files")
+        file = null
+      }
+      else if (file.size > 1048576) {
+        alert("One of your files is too large. Please try again with a compressed/smaller file")
         file = null
       }
       else {
