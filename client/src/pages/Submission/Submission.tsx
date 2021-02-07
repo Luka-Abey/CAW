@@ -83,11 +83,20 @@ const Submission: React.FC = () => {
   // (e: React.ChangeEvent<HTMLInputElement>) was not working... using e: any for now
   const handleImage = async (e: any) => {
     const initialFileUpload = e.target.files;
+
+    // limit of file size in bytes, eg 1048576 == 1mb, 2097152 == 2mb
+    const fileSizeLimit = 1048576; // 1 megabyte
+
     [...initialFileUpload].forEach((file: any) => {
-      // check regex in here
       const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.xbm|\.tif|\.ico|\.svg|\.webp|\.pjpeg|\.avif)$/i; 
+      // .exec checks if argument string contains string provided and alerts user
       if (!allowedExtensions.exec(file.name)) {
-        alert("Invalid file type provided, please try again and click Choose Files")
+        alert("Invalid file type provided. Please try again and click Choose Files")
+        file = null
+      }
+      // checks file size is correct and alerts user
+      else if (file.size > fileSizeLimit) {
+        alert("One of your files is too large. Please try again with a compressed/smaller file")
         file = null
       }
       else {
