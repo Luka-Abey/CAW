@@ -85,7 +85,7 @@ const Submission: React.FC = () => {
     const initialFileUpload = e.target.files;
 
     // limit of file size in bytes, eg 1048576 == 1mb, 2097152 == 2mb
-    const fileSizeLimit = 1048576; // 1 megabyte
+    const fileSizeLimit = 10485760; // 10 megabyte cloudinary limit
 
     [...initialFileUpload].forEach((file: any) => {
       const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.xbm|\.tif|\.ico|\.svg|\.webp|\.pjpeg|\.avif)$/i; 
