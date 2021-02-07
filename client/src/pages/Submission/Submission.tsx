@@ -93,14 +93,13 @@ const Submission: React.FC = () => {
       if (!allowedExtensions.exec(file.name)) {
         alert("Invalid file type provided. Please try again and click Choose Files")
         file = null
-        // should it be handles with resetImage() ?
-        // resetImage()
+        resetImage()
       }
       // checks file size is correct and alerts user
       else if (file.size > fileSizeLimit) {
         alert("One of your files is too large. Please try again with a compressed/smaller file")
         file = null
-        // resetImage()
+        resetImage()
       }
       else {
         setImageArray(initialFileUpload);
