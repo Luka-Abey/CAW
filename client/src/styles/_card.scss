@@ -18,15 +18,25 @@
   }
 
   .card-text {
-    padding: 0;
+    padding: 25px 0px;
   }
 }
 
 @media screen and (max-width: 640px) {
   .card {
+    width: 75%;
+    height: auto;
     padding: 0;
     width: 100vm;
     font-size: 0.75rem;
-    border: red solid 2px;
+  }
+
+  .card .card-title {
+    padding: 0px;
+    font-size: 1.2rem;
+  }
+
+  .card .card-text {
+    padding: 0px;
   }
 }
