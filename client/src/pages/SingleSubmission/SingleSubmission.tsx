@@ -23,7 +23,7 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
         fService.getSubmissionById(submissionId).then(response => setSubmission(response));
     }
 
-    useEffect( fetchSubmission,  []);
+    useEffect(fetchSubmission,  []);
     
   return (
   <>
