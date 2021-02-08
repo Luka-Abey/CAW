@@ -1,5 +1,8 @@
 import React,  { useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
+import CustomModal from '../../components/Modal/CustomModal';
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
 import Wallpaper from '../../components/Wallpaper/Wallpaper';
 import submissionService from '../../services/submissionService';
 import SendSubmissionType from '../../models/SendSubmissionType';
@@ -8,6 +11,13 @@ import { setSourceMapRange } from 'typescript';
 const Submission: React.FC = () => {
 
   const sService = new submissionService;
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+    setShow(false)
+    window.scrollTo({top: 0})
+  };
+
+  const handleShow = () => setShow(true);
 
   const [loading, setLoading] = useState(false)
   const [imageArray, setImageArray] = useState(new Array<String>());
@@ -149,13 +159,30 @@ const Submission: React.FC = () => {
       }); 
       
       resetImage();
-      setLoading(false)
+      setLoading(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      handleShow();
+      // window.scrollTo({ top: 0, behavior: 'smooth' });
 }
   
 
   return (
   <>
+    <Modal show={show} onHide={handleClose} centered>
+      <Modal.Dialog>
+        <Modal.Header closeButton>
+          <Modal.Title>Thank you for your submission</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p>Click through to see and contribute to others' ideas.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>Close</Button>
+          <Button variant="primary" href="/feedback">Submissions</Button>
+        </Modal.Footer>
+      </Modal.Dialog> 
+    </Modal>
     <Wallpaper />
       <div className="submission-content">
           <h1>Submission Form Coming Soon</h1>
