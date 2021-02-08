@@ -9,6 +9,27 @@
   h3 {
     padding-top: 25px;
   }
+
+  .pretext-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .custom-heading {
+    font-size: 2rem;
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+    color: $heading-color;
+  }
+
+  .hr {
+    border: none;
+    height: 4px;
+    background-color: $primary-green;
+    width: 37%;
+  }
 }
 
 .form-container {
