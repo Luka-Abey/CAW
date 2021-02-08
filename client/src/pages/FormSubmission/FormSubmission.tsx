@@ -150,6 +150,7 @@ const Submission: React.FC = () => {
       
       resetImage();
       setLoading(false)
+      window.scrollTo({ top: 0, behavior: 'smooth' });
 }
   
 
@@ -207,8 +208,9 @@ const Submission: React.FC = () => {
           </div>
             {loading ? (
                 <button className="btn btn-primary" type="button" disabled>
-                  <span className="spinner-border spinner-border-sm sr-only" role="status" aria-hidden="true"></span>
-                    Loading...
+                  <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                  </div>
                 </button>
               ) : 
                 <button type="submit" className="btn btn-primary" >
