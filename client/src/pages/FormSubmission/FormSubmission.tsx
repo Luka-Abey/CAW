@@ -116,7 +116,7 @@ const Submission: React.FC = () => {
   // validate submissions & send off the submission.
   const handleSubmit = async (e: React.FormEvent<EventTarget>) => { 
     e.preventDefault();
-    
+    setLoading(true)
     for (let index = 0; index < imageArray.length; index++) {
       await uploadFile(imageArray[index]);
     }
@@ -149,6 +149,7 @@ const Submission: React.FC = () => {
       }); 
       
       resetImage();
+      setLoading(false)
 }
   
 
@@ -204,10 +205,16 @@ const Submission: React.FC = () => {
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
             <input type="file" className="form-control-file" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
           </div>
-          <div>
-            {loading ? (<h3>Loading image...</h3>) : <h3/>}
-          </div>
-          <button type="submit" className="btn btn-primary" >Submit</button>
+            {loading ? (
+                <button className="btn btn-primary" type="button" disabled>
+                  <span className="spinner-border spinner-border-sm sr-only" role="status" aria-hidden="true"></span>
+                    Loading...
+                </button>
+              ) : 
+                <button type="submit" className="btn btn-primary" >
+                  Submit
+                </button>
+            }
         </form>
       </div>
     <Footer /> 

@@ -20,8 +20,6 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
     const fService = new feedbackService();
 
     const fetchSubmission = () => {
-        const sId = props.match.params;
-        console.log(submissionId)
         fService.getSubmissionById(submissionId).then(response => setSubmission(response));
     }
 
