@@ -14,7 +14,7 @@ const Submission: React.FC = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false)
-    window.location.reload(true)
+    window.location.reload()
   };
 
   const handleShow = () => setShow(true);
