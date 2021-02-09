@@ -35,10 +35,18 @@ const Feedback: React.FC = () => {
 
     <ul className="submission-list">
       <Card title="Example Submission" imageUrl="https://imgur.com/n5VyLq2.png" description="This is an example submission" submissionId="example" />
-      {
-      results?.map((submission, index) => 
-        <Card key={index} title={submission.title} description={submission.description} imageUrl={submission.image == undefined || submission.image.length < 1 ?  "https://imgur.com/n5VyLq2.png" : submission.image[0]} submissionId={submission._id}/>
-      )}
+      {loading ? (
+                  <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                  </div>
+              ) : 
+                results?.map((submission, index) => 
+                  <Card key={index} title={submission.title} description={submission.description} imageUrl={submission.image == undefined || submission.image.length < 1 ?  "https://imgur.com/n5VyLq2.png" : submission.image[0]} submissionId={submission._id}/>
+                )
+            }
+      
+      
+      
     </ul>
 
     <Footer /> 
