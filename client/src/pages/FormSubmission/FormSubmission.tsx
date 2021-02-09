@@ -189,7 +189,7 @@ const Submission: React.FC = () => {
       <div className="pretext-wrapper"> 
         <h2 className="custom-heading">Submission Form</h2>
         <hr className="hr" />
-        <p className="p-text">Please submit your idea below. If you want some help, please check out our Example Idea for some guidance. Once your idea is submitted, it will be added to our database and displayed on the submitted ideas page. There, people will be able to add comments and questions.
+        <p className="p-text">Please submit your idea below. If you want some help, please check out our <a href="/submissions/example" className="link-to-example">example</a> idea for some guidance. Once your idea is submitted, it will be added to our database and displayed on the submitted ideas page. There, people will be able to add comments and questions.
         </p>
       </div>
       </div>
