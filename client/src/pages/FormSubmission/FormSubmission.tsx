@@ -189,15 +189,14 @@ const Submission: React.FC = () => {
     </Modal>
     <Wallpaper />
       <div className="submission-content">
-          
-      <div className="pretext-wrapper"> 
-        <h2 className="custom-heading">Submission Form</h2>
-        <hr className="hr" />
-        <p className="p-text">Please submit your idea below. If you want some help, see our <a href="/submissions/example" className="link-to-example">example</a> idea for some guidance. Once your idea is submitted, it will be added to our database and displayed on the <a href="/submissions" className="link-to-example">submitted ideas</a> page. There, people will be able to add comments and questions.
-        <br/><br/>
-        If you would prefer to submit your idea in another format, such as by video or voice recording, please contact us via <a href="mailto:communityactionwaste@gmail.com?subject=Alternate Format Submission" className="link-to-example">email</a> and we can find a way that works for you.
-        </p>
-      </div>
+        <div className="pretext-wrapper"> 
+          <h2 className="custom-heading">Submission Form</h2>
+          <hr className="hr" />
+          <p className="p-text">Please submit your idea below. If you want some help, see our <a href="/submissions/example" className="link-to-example">example</a> idea for some guidance. Once your idea is submitted, it will be added to our database and displayed on the <a href="/submissions" className="link-to-example">submitted ideas</a> page. There, people will be able to add comments and questions.
+          <br/><br/>
+          If you would prefer to submit your idea in another format, such as by video or voice recording, please contact us via <a href="mailto:communityactionwaste@gmail.com?subject=Alternate Format Submission" className="link-to-example">email</a> and we can find a way that works for you.
+          </p>
+        </div>
       </div>
       <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
