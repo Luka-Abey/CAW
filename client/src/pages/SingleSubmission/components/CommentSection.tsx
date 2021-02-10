@@ -23,12 +23,22 @@ const CommentSection: React.FC<MatchParams> = (props) => {
 
   return (
     <>
-      <ul className="submission-list">
-      {
-      results?.map((comment, index) => 
-        <li>{comment.user}: {comment.commentBody}</li>
-      )}
-    </ul>
+      <div className="content-wrapper">
+        <div className="container my-container">
+        <h1 className="custom-heading">Comments</h1>
+          {
+            results?.map((comment, index) => (
+            <div className="row my-row">
+              <div className="col-sm my-col">
+                <p>{comment.user}</p>
+                <small>{comment.date}</small>
+                <br/>
+                <p className="mb-1">{comment.commentBody}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   )
 };

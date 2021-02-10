@@ -94,7 +94,6 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
               <p>{submission?.other}</p>
             </div>
           </div>
-
       </div>
     </div>
     <CommentSection id={submissionId} />
