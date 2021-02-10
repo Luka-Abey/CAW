@@ -26,8 +26,6 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
     });
 
     const submissionId = props.match.params.id;
-
-    console.log(submissionId)
     
     const fService = new feedbackService();
 
