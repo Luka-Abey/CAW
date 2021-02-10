@@ -2,7 +2,8 @@ export type CommentType = {
   _id?: string;
   submission: string;
   commentBody: string;
-  date: Date;
+  user: string;
+  date?: Date;
 }
 
 export default CommentType;
