@@ -26,7 +26,7 @@ const CommentSection: React.FC<MatchParams> = (props) => {
       <ul className="submission-list">
       {
       results?.map((comment, index) => 
-        <li>{comment.commentBody}</li>
+        <li>{comment.user}: {comment.commentBody}</li>
       )}
     </ul>
     </>

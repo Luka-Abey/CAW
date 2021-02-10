@@ -27,12 +27,11 @@ const NewComment: React.FC<MatchParams> = (props) => {
   const handleSubmit = async (e: React.FormEvent<EventTarget>) => { 
     e.preventDefault();
     setLoading(true)
-    // Once react finishes updating this state, it triggers a POST request in the useEffect()
     cService.postComment(comment)
     setLoading(false)
+    // re-render component here... then comment will instantly come up
 }
   
-
   return (
   <>
       <div className="form-container">
