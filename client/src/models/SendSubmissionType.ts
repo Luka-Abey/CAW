@@ -8,6 +8,7 @@ export type SendSubmissionType = {
     maintenance?: string;
     other?: string;
     image?: Array<string>;
+    contact: string;
   }
 
 export default SendSubmissionType;
