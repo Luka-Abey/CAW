@@ -1,7 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import CommentService from '../../../services/commentService';
+import CommentType from '../../../models/CommentType';
 
-const CommentSection: React.FC = () => (
+interface MatchParams { 
+  id: string;
+}
 
-);
+const CommentSection: React.FC<MatchParams> = (props) => {
+  const cService = new CommentService();
+  const submissionId = props.id;
+  const [results, setResults] = useState(new Array<CommentType>());
+  
+  useEffect(() => {
+    fetchSubmissionComments();
+  }, []);
+  
+  const fetchSubmissionComments = async () => { 
+    await cService.getCommentsBySubmission(submissionId).then(response => {
+    setResults(response);
+  })
+} 
+
+  return (
+    <>
+      <ul className="submission-list">
+      {
+      results?.map((comment, index) => 
+        <h1>{comment.commentBody}</h1>
+      )}
+    </ul>
+    </>
+  )
+};
 
 export default CommentSection;

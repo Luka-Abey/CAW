@@ -5,6 +5,7 @@ import ReceiveSubmissionType from '../../models/ReceiveSubmissionType';
 import feedbackService from '../../services/feedbackService';
 import { RouteComponentProps } from 'react-router';
 import CardCarousel from './components/CardCarousel';
+import CommentSection from './components/CommentSection';
 
 interface MatchParams { 
     id: string;
@@ -96,7 +97,7 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
 
       </div>
     </div>
-
+    <CommentSection key={submissionId} id={submissionId} />
     <Footer /> 
   </>
   )
