@@ -14,15 +14,15 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
 
     const [submission, setSubmission] = useState<ReceiveSubmissionType>({
       title: "",
-    description: "",
-    benefit: "",
-    contribution: "",
-    skills: "",
-    costs: "",
-    maintenance: "",
-    other: "",
-    image: [],
-    _id: ""
+      description: "",
+      benefit: "",
+      contribution: "",
+      skills: "",
+      costs: "",
+      maintenance: "",
+      other: "",
+      image: [],
+      _id: ""
     });
 
     const submissionId = props.match.params.id;

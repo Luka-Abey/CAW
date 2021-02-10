@@ -9,6 +9,7 @@ const Feedback: React.FC = () => {
   const fService = new FeedbackService;
   const [results, setResults] = useState(new Array<ReceiveSubmissionType>());
   const [loading, setLoading] = useState(true);
+  const exampleSubmissionId = '6023d7b81162a90004e4ba74'
 
   // on load 
   useEffect(() => {
@@ -27,6 +28,7 @@ const Feedback: React.FC = () => {
   return (  
   <>
     <Wallpaper />
+
     <div className="feedback-content">
         <h1>No ideas have been submitted Yet:</h1>
         <h3>Please check back soon!</h3>
@@ -34,19 +36,32 @@ const Feedback: React.FC = () => {
     </div> 
 
     <ul className="submission-list">
-      <Card title="Example Submission" imageUrl="https://imgur.com/n5VyLq2.png" description="This is an example submission" submissionId="example" />
+      <Card 
+        title="Example Idea: Communal Green with Seating" 
+        imageUrl="https://res.cloudinary.com/dura1eemm/image/upload/v1612961433/caw/igcefffzmdrgghcf05e4.png" 
+        description="Our idea is to create a communal green area with seating. It will have an L shaped wooden bench, with a raised bed in the corner for growing plants, flowers and herbs. Upcycled household items such a..." 
+        submissionId={exampleSubmissionId}/>
       {loading ? (
                   <div className="spinner-border" role="status">
                     <span className="sr-only">Loading...</span>
                   </div>
               ) : 
-                results?.map((submission, index) => 
-                  <Card key={index} title={submission.title} description={submission.description} imageUrl={submission.image == undefined || submission.image.length < 1 ?  "https://imgur.com/n5VyLq2.png" : submission.image[0]} submissionId={submission._id}/>
+                results?.map((submission, index) => {
+                    if(submission._id !== exampleSubmissionId) {
+                      return (
+                        <Card 
+                          key={index} 
+                          title={submission.title} 
+                          description={submission.description} 
+                          imageUrl={
+                            submission.image == undefined || submission.image.length < 1 ? "https://imgur.com/n5VyLq2.png" : submission.image[0]
+                          } 
+                          submissionId={submission._id} />
+                      )
+                    }
+                  }                  
                 )
             }
-      
-      
-      
     </ul>
 
     <Footer /> 
