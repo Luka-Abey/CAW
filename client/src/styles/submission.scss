@@ -36,9 +36,10 @@
   text-decoration: none;
   color: black;
   text-decoration: underline;
-  transition: 1s;
+  transition: 0.5s;
   &:hover {
-    color: $primary-green;
+    text-decoration: none;
+    color: black;
   }
 }
 
