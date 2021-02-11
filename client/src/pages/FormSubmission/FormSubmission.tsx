@@ -6,11 +6,23 @@ import Button from 'react-bootstrap/Button'
 import Wallpaper from '../../components/Wallpaper/Wallpaper';
 import submissionService from '../../services/submissionService';
 import SendSubmissionType from '../../models/SendSubmissionType';
+import Recaptcha from 'react-recaptcha';
 import { setSourceMapRange } from 'typescript';
 
 const Submission: React.FC = () => {
 
   const sService = new submissionService;
+
+  const [isVerified, setIsVerified] = useState(false);
+
+  const captchaCallback = () => {
+    console.log('loaded captcha');
+  };
+
+  const userVerified = () => {
+    setIsVerified(true)
+  }
+
   const [show, setShow] = useState(false);
   const handleClose = () => {
     setShow(false)
@@ -128,6 +140,10 @@ const Submission: React.FC = () => {
   // validate submissions & send off the submission.
   const handleSubmit = async (e: React.FormEvent<EventTarget>) => { 
     e.preventDefault();
+    if (!isVerified) {
+      alert('Please verify you are not a robot !')
+      return
+    }
     setLoading(true)
     for (let index = 0; index < imageArray.length; index++) {
       await uploadFile(imageArray[index]);
@@ -258,6 +274,13 @@ const Submission: React.FC = () => {
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
             <input type="file" className="form-control-file" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
           </div>
+          <Recaptcha
+            sitekey="6LcDE1QaAAAAAL56wfQD7anULS07GdV7tcFJsNA9"
+            render="explicit"
+            verifyCallback={userVerified}
+            onloadCallback={captchaCallback}
+            className="centerize"
+          />
             {loading ? (
                 <button className="btn btn-primary" type="button" disabled>
                   <div className="spinner-border" role="status">
