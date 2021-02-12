@@ -272,7 +272,7 @@ const Submission: React.FC = () => {
           </div>
           <div className="form-check">
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
-            <input type="file" className="form-control-file" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
+            <input type="file" className="form-control-file text-center" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
           </div>
           <Recaptcha
             sitekey="6LcDE1QaAAAAAL56wfQD7anULS07GdV7tcFJsNA9"
