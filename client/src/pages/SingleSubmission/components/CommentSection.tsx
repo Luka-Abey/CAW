@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import CommentService from '../../../services/commentService';
 import CommentType from '../../../models/CommentType';
+import NewComment from './NewComment';
+
 
 interface MatchParams { 
   id: string;
@@ -10,10 +12,15 @@ const CommentSection: React.FC<MatchParams> = (props) => {
   const cService = new CommentService();
   const submissionId = props.id;
   const [results, setResults] = useState(new Array<CommentType>());
-  
+  const [render, setRender] = useState(false);
+
+  const handleNewComment = () => {
+    setRender(!render)
+  }
+
   useEffect(() => {
     fetchSubmissionComments();
-  }, []);
+  }, [render]);
   
   const fetchSubmissionComments = async () => { 
     await cService.getCommentsBySubmission(submissionId).then(response => {
@@ -38,6 +45,7 @@ const CommentSection: React.FC<MatchParams> = (props) => {
             </div>
           ))}
         </div>
+        <NewComment key={submissionId} id={submissionId} />
       </div>
     </>
   )

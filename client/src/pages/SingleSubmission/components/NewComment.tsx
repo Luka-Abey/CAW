@@ -5,6 +5,7 @@ import { setSourceMapRange } from 'typescript';
 
 interface MatchParams { 
   id: string;
+  // handleNewComment: () => ;
 }
 
 const NewComment: React.FC<MatchParams> = (props) => {
@@ -28,13 +29,18 @@ const NewComment: React.FC<MatchParams> = (props) => {
     e.preventDefault();
     setLoading(true)
     cService.postComment(comment)
+    setComment({
+      commentBody: "",
+      submission: submissionId,
+      user: ""
+    })
+    // handleNewComment()
     setLoading(false)
     // re-render component here... then comment will instantly come up
 }
   
   return (
   <>
-      <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -58,7 +64,6 @@ const NewComment: React.FC<MatchParams> = (props) => {
                 </button>
             }
         </form>
-      </div>
   </>
   )
 };
