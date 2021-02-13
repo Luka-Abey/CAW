@@ -15,7 +15,7 @@ const Submission: React.FC = () => {
 
   const [isVerified, setIsVerified] = useState(false);
 
-  const captchaCallback = () => {
+  const onloadCallback = () => {
     console.log('loaded captcha');
   };
 
@@ -278,7 +278,7 @@ const Submission: React.FC = () => {
             sitekey="6LcDE1QaAAAAAL56wfQD7anULS07GdV7tcFJsNA9"
             render="explicit"
             verifyCallback={userVerified}
-            onloadCallback={captchaCallback}
+            onloadCallback={onloadCallback}
             className="centerize"
           />
             {loading ? (
