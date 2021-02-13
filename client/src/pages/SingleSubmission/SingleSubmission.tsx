@@ -95,7 +95,7 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
           </div>
       </div>
     </div>
-    <CommentSection id={submissionId} />
+    <CommentSection key={submissionId} id={submissionId} />
     <Footer /> 
   </>
   )

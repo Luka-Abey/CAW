@@ -16,6 +16,7 @@ const CommentSection: React.FC<MatchParams> = (props) => {
 
   const handleNewComment = () => {
     setRender(!render)
+    fetchSubmissionComments()
   }
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const CommentSection: React.FC<MatchParams> = (props) => {
             </div>
           ))}
         </div>
-        <NewComment key={submissionId} id={submissionId} />
+        <NewComment key={submissionId} id={submissionId} handleNewComment={handleNewComment} />
       </div>
     </>
   )

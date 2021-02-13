@@ -5,11 +5,12 @@ import { setSourceMapRange } from 'typescript';
 
 interface MatchParams { 
   id: string;
-  // handleNewComment: () => ;
+  handleNewComment: () => void;
 }
 
 const NewComment: React.FC<MatchParams> = (props) => {
   const submissionId = props.id;
+  const handleNewComment = props.handleNewComment;
   const cService = new commentService;
   const [loading, setLoading] = useState(false)
   const [comment, setComment] = useState<CommentType>({
@@ -34,7 +35,7 @@ const NewComment: React.FC<MatchParams> = (props) => {
       submission: submissionId,
       user: ""
     })
-    // handleNewComment()
+    handleNewComment();
     setLoading(false)
     // re-render component here... then comment will instantly come up
 }
