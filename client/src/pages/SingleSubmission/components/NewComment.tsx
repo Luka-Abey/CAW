@@ -42,7 +42,7 @@ const NewComment: React.FC<MatchParams> = (props) => {
   
   return (
   <>
-        <form className="submission-form" onSubmit={handleSubmit}>
+        <form className="submission-form comment-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
               <label >Name</label>

@@ -14,6 +14,13 @@ const CommentSection: React.FC<MatchParams> = (props) => {
   const [results, setResults] = useState(new Array<CommentType>());
   const [render, setRender] = useState(false);
 
+  const renderDate = (inputDate: string) => { 
+      const cdate = (new Date(inputDate)).toString();
+      return (
+        <span>{ cdate }</span>
+      );
+  }
+
   const handleNewComment = () => {
     setRender(!render)
     fetchSubmissionComments()
@@ -32,22 +39,27 @@ const CommentSection: React.FC<MatchParams> = (props) => {
   return (
     <>
       <div className="content-wrapper">
-        <div className="container my-container">
-        <hr className="hr-divider"/>
+        <div className="container comment-container">
+        <hr />
         <h1 className="comment-heading">{results.length} Comments:</h1>
           {
             results?.map((comment, index) => (
-            <div className="row my-row">
-              <div className="col-sm my-col">
-                <p>{comment.user}</p>
-                <small>{comment.date}</small>
+            <div className="row row-comment">
+              <div className="col-sm col-comment">
+                <div className="comment-top">
+                { comment.user === "eq.body.user" ? 
+                  <p className="comment-user">Anoymous</p> :
+                  <p className="comment-user">{comment.user}</p>
+                }
+                <p className="comment-date">{comment.date}</p>
+                </div> 
                 <br/>
-                <p className="mb-1">{comment.commentBody}</p>
+                <p className="comment-body">{comment.commentBody}</p>
               </div>
             </div>
           ))}
         </div>
-        <NewComment key={submissionId} id={submissionId} handleNewComment={handleNewComment} />
+        <NewComment key={submissionId} id={submissionId} handleNewComment={handleNewComment} /> 
       </div>
     </>
   )

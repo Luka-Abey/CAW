@@ -26,7 +26,6 @@ const ImageCarousel: React.FC<PropsType> = ( {imageUrls} ) => {
     return (
         <>  
             <Carousel>
-                {}
                 { images?.map((image, index) => {
                     <Carousel.Item>
                         <img 
