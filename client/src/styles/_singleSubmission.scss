@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: auto;
 
   .custom-heading {
@@ -13,25 +13,73 @@
   }
 
   .heading {
+    font-size: 1.5rem;
+    font-family: "Noto Serif", serif;
     font-weight: bold;
-    margin-bottom: 15px;
+    color: $white;
+    margin-bottom: 10px;
   }
-  .container {
-    .row-image {
-      display: flex;
-      justify-content: center;
-    }
-    .carousel-wrapper {
-      border: blue solid 2px;
 
+  .comment-heading {
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+    color: $black;
+    margin-bottom: 10px;
+  }
+
+  // .hr-divider {
+  //   border: none;
+  //   border-radius: 50px;
+  //   height: 50px;
+  //   background-color: $black;
+  //   width: 100%;
+  // }
+
+  .description {
+    margin-top: 25px;
+  }
+
+  .container {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    .carousel-wrapper {
       height: 400px;
       width: 400px;
     }
     .row {
-      //   border: solid $medium-green 2px;
-      background-color: $light-green;
       padding: 7.5% 5%;
       margin: 5%;
+      background-color: $primary-green;
+      border-radius: 25px;
+    }
+
+    .row-image {
+      width: 500px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .col-image {
+      padding: 50px;
+      background-color: $light-green;
+    }
+
+    .carousel-control-prev {
+      left: -50px;
+    }
+
+    .carousel-control-next {
+      right: -50px;
+    }
+
+    .carousel-indicators {
+      bottom: -25px;
     }
   }
 }

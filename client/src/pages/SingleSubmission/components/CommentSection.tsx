@@ -33,7 +33,8 @@ const CommentSection: React.FC<MatchParams> = (props) => {
     <>
       <div className="content-wrapper">
         <div className="container my-container">
-        <h1 className="custom-heading">Comments</h1>
+        <hr className="hr-divider"/>
+        <h1 className="comment-heading">{results.length} Comments:</h1>
           {
             results?.map((comment, index) => (
             <div className="row my-row">
