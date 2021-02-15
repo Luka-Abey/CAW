@@ -204,7 +204,7 @@ const Submission: React.FC = () => {
       </Modal.Dialog> 
     </Modal>
     <Wallpaper />
-      <div className="submission-content">
+      {/* <div className="submission-content">
         <div className="pretext-wrapper"> 
           <h2 className="custom-heading">Submission Form</h2>
           <hr className="hr" />
@@ -213,8 +213,18 @@ const Submission: React.FC = () => {
           If you would prefer to submit your idea in another format, such as by video or voice recording, please contact us via <a href="mailto:communityactionwaste@gmail.com?subject=Alternate Format Submission" className="link-to-example">email</a> and we can find a way that works for you.
           </p>
         </div>
+      </div> */}
+      <div className="submission-content">
+        <div className="pretext-wrapper"> 
+          <h2 className="custom-heading">Submission Form</h2>
+          <hr className="hr" />
+          <p className="p-text">Submission Form Coming Soon.
+          <br/><br/>
+          If you would prefer to submit your idea in another format, such as by video or voice recording, please contact us via <a href="mailto:communityactionwaste@gmail.com?subject=Alternate Format Submission" className="link-to-example">email</a> and we can find a way that works for you.
+          </p>
+        </div>
       </div>
-      <div className="form-container">
+      {/* <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -293,7 +303,7 @@ const Submission: React.FC = () => {
                 </button>
             }
         </form>
-      </div>
+      </div> */}
     <Footer /> 
   </>
   )

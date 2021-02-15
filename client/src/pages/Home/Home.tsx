@@ -69,12 +69,12 @@ const Home: React.FC = () => {
         </div>
 
         <div className="info-wrapper sub-text">
-          <h3 className="header custom-heading-h3">27th Feb Idea(s) Presentations</h3>
+          <h3 className="header custom-heading-h3">27th Feb Ideas Meetup</h3>
           <div className="text-wrapper">
-            <p>This is a chance to present your idea and also to check out the other ideas on the table. You’ll have the chance to explain why your idea is so great. As well as this, you can ask and receive questions to get/give extra feedback and pointers for improvement.
+            <p>We’ll be getting together for a second time to discuss ideas and do a bit of brainstorming. There is no need to bring anything except yourself! No need to have an idea already. 
             <br/>
             <br/>
-            Please sign up to these by emailing us via: communityactionwaste@gmail.com
+            Please sign up via Eventbrite: <a href="https://www.eventbrite.co.uk/e/ideas-meet-up-caw-micro-grant-tickets-141593354535" target="_blank">Sign-Up</a>
             </p>
           </div>
         </div>

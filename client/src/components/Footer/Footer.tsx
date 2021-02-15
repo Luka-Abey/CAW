@@ -7,6 +7,9 @@ const Footer: React.FC = () => (
                 <a href="https://www.facebook.com/CommunityActionWaste" target="_blank">
                     <i className="fab fa-facebook-f" />
                 </a>
+                <a href="https://www.instagram.com/communityactiononwaste" target="_blank">
+                    <i className="fab fa-instagram" />
+                </a>
             </div>
             <ul className="list-inline">
                 <li className="list-inline-item"><a href="#">Home</a></li>
