@@ -223,7 +223,7 @@ const Submission: React.FC = () => {
           </p>
         </div>
       </div>
-      {/* <div className="form-container">
+      <div className="form-container">
         <form className="submission-form" onSubmit={handleSubmit}>
           <div className="form-content-wrapper">
             <div className="form-group">
@@ -277,7 +277,7 @@ const Submission: React.FC = () => {
               <br/>
               <label className="sub-label">We will not share this with anyone - this is just to contact you if we want to discuss implementing your idea!</label>
               <input type="text" required className="form-control" maxLength={1000} name="contact" onChange={handleInputText} value={submission.contact} />
-            </div>   
+            </div>
           </div>
           <div className="form-check">
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
@@ -302,7 +302,7 @@ const Submission: React.FC = () => {
                 </button>
             }
         </form>
-      </div> */}
+      </div>
     <Footer /> 
   </>
   )

@@ -28,14 +28,7 @@ const Feedback: React.FC = () => {
   return (  
   <>
     <Wallpaper />
-
-    <div className="feedback-content">
-        <h1>No ideas have been submitted Yet:</h1>
-        <h3>Please check back soon!</h3>
-      <hr/>
-    </div> 
-
-    {/* <ul className="submission-list">
+    <ul className="submission-list">
       <Card 
         title="Example Idea: Communal Green with Seating" 
         imageUrl="https://res.cloudinary.com/dura1eemm/image/upload/v1612961433/caw/igcefffzmdrgghcf05e4.png" 
@@ -62,7 +55,7 @@ const Feedback: React.FC = () => {
                   }                  
                 )
             }
-    </ul> */}
+    </ul>
 
     <Footer /> 
   </> 
