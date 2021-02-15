@@ -6,7 +6,7 @@ import ReceiveSubmissionType from '../../models/ReceiveSubmissionType';
 import Card from '../../components/Card/Card';
 const Feedback: React.FC = () => { 
   
-  const fService = new FeedbackService;
+  const fService = new FeedbackService();
   const [results, setResults] = useState(new Array<ReceiveSubmissionType>());
   const [loading, setLoading] = useState(true);
   const exampleSubmissionId = '602427dcd0cc890004c267cf'
@@ -54,7 +54,7 @@ const Feedback: React.FC = () => {
                           title={submission.title} 
                           description={submission.description} 
                           imageUrl={
-                            submission.image == undefined || submission.image.length < 1 ? "https://imgur.com/n5VyLq2.png" : submission.image[0]
+                            submission.image === undefined || submission.image.length < 1 ? "https://imgur.com/n5VyLq2.png" : submission.image[0]
                           } 
                           submissionId={submission._id} />
                       )

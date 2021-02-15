@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           <h2 className="header custom-heading">Current Project</h2>
           <hr className="hr white"/>
           <div className="text-wrapper">
-            <p>Using the money raised from our shops, we are looking to fund an idea to decorate and invigorate street sections cut off as part of the Hyde Park Active Travel Neighbourhoods (ATN) initiative. These ideas will be both designed and implemented by the community.</p>
+            <p>Using the £250 raised from our shops, we are looking to fund an idea to decorate and invigorate street sections cut off as part of the Hyde Park Active Travel Neighbourhoods (ATN) initiative. These ideas will be both designed and implemented by the community.</p>
           </div>
         </div>
 

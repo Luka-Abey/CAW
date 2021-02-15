@@ -51,7 +51,7 @@ const CommentSection: React.FC<MatchParams> = (props) => {
                   <p className="comment-user">Anoymous</p> :
                   <p className="comment-user">{comment.user}</p>
                 }
-                <p className="comment-date">{comment.date}</p>
+                <p className="comment-date">{ comment.date?.toString().substring(11, 16) + " on " + comment.date?.toString().substring(0,10) }</p>
                 </div> 
                 <br/>
                 <p className="comment-body">{comment.commentBody}</p>

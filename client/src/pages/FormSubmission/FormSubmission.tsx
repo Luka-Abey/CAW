@@ -1,13 +1,11 @@
 import React,  { useEffect, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
-import CustomModal from '../../components/Modal/CustomModal';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Wallpaper from '../../components/Wallpaper/Wallpaper';
 import submissionService from '../../services/submissionService';
 import SendSubmissionType from '../../models/SendSubmissionType';
 import Recaptcha from 'react-recaptcha';
-import { setSourceMapRange } from 'typescript';
 
 const Submission: React.FC = () => {
 
@@ -67,6 +65,7 @@ const Submission: React.FC = () => {
   useEffect(() => {
     if (finalSubmission.title !== "") { 
       sService.postSubmission(finalSubmission).catch(e => console.log("something went wrong: " + e));
+
     }
  }, [finalSubmission]);
   
@@ -231,48 +230,48 @@ const Submission: React.FC = () => {
               <label >Who would benefit from your idea? (max 200 words)</label>
               <br/>
               <label className="sub-label">Think about the different groups of people who might come into contact with your idea - children, families, shop owners, older people etc. </label>
-              <textarea className="form-control text-area" maxLength={3000} name="benefit" onChange={handleTextArea} value={submission.benefit} />
+              <textarea required className="form-control text-area" maxLength={3000} name="benefit" onChange={handleTextArea} value={submission.benefit} />
             </div>
             <div className="form-group">
               <label >How will your idea make a positive contribution to the Hyde park area? (max 200 words)</label>
               <br/>
               <label className="sub-label">Tell us about the positive changes your idea would bring about. </label>
-              <textarea className="form-control text-area" maxLength={3000} name="contribution" onChange={handleTextArea} value={submission.contribution} />
+              <textarea required className="form-control text-area" maxLength={3000} name="contribution" onChange={handleTextArea} value={submission.contribution} />
             </div>          
             <div className="form-group">
               <label >Are there any practical skills needed to implement your idea? (max 200 words)</label>
               <br/>
               <label className="sub-label">Would something need building or assembling? Please note that you don’t need to be the person with these practical skills, but it’s useful information for gathering a group of volunteers with the right skills for the job! </label>
-              <textarea className="form-control text-area" maxLength={3000} name="skills" onChange={handleTextArea} value={submission.skills} />
+              <textarea required className="form-control text-area" maxLength={3000} name="skills" onChange={handleTextArea} value={submission.skills} />
             </div>          
             <div className="form-group">
-              <label >Outline the rough costs for your idea - how will it fit into the £250 budget? (max 200 words)</label>
+              <label >Outline the rough costs for your idea - how will it fit into the allocated budget? (max 200 words)</label>
               <br/>
               <label className="sub-label">No need to be exact, just a rough estimate will do.</label>
-              <textarea className="form-control text-area" maxLength={3000} placeholder="" name="costs" onChange={handleTextArea} value={submission.costs} />
+              <textarea required className="form-control text-area" maxLength={3000} placeholder="" name="costs" onChange={handleTextArea} value={submission.costs} />
             </div>          
             <div className="form-group">
               <label >Will it need maintenance? If so, how might this happen? (max 200 words)</label>
               <br/>
               <label className="sub-label">Is your idea sort of ‘once it’s done, it’s done’, or would it require some looking after? </label>
-              <textarea className="form-control text-area" maxLength={3000} name="maintenance" onChange={handleTextArea} value={submission.maintenance} />
+              <textarea required className="form-control text-area" maxLength={3000} name="maintenance" onChange={handleTextArea} value={submission.maintenance} />
             </div>          
             <div className="form-group">
               <label >Is there anything else to consider? (max 200 words)</label>
               <br/>
               <label className="sub-label">Is there anything else you want to tell us about your idea? Or perhaps you’ve got some questions about your idea that you haven’t got the answers to yet? </label>
-              <textarea className="form-control text-area" maxLength={3000} name="other" onChange={handleTextArea} value={submission.other} />
+              <textarea required className="form-control text-area" maxLength={3000} name="other" onChange={handleTextArea} value={submission.other} />
             </div>   
             <div className="form-group">
               <label >Contact details (name and email/number)</label>
               <br/>
               <label className="sub-label">We will not share this with anyone - this is just to contact you if we want to discuss implementing your idea!</label>
-              <input type="text" className="form-control" maxLength={1000} name="contact" onChange={handleInputText} value={submission.contact} />
+              <input type="text" required className="form-control" maxLength={1000} name="contact" onChange={handleInputText} value={submission.contact} />
             </div>   
           </div>
           <div className="form-check">
             <label>Feel free to draw or add example images which might help us to imagine your idea </label>
-            <input type="file" className="form-control-file text-center" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
+            <input type="file" required className="form-control-file text-center" name="image" onChange={handleImage} id="fileInput" multiple accept="image/*" key={key || ""}/>
           </div>
           <Recaptcha
             sitekey="6LcDE1QaAAAAAL56wfQD7anULS07GdV7tcFJsNA9"

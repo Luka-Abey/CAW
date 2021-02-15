@@ -26,7 +26,7 @@ const ImageCarousel: React.FC<PropsType> = ( {imageUrls} ) => {
     return (
         <>  
             <Carousel>
-                { images?.map((image, index) => {
+                {/* { images?.map((image, index) => {
                     <Carousel.Item>
                         <img 
                         className="d-block w-100"
@@ -35,7 +35,28 @@ const ImageCarousel: React.FC<PropsType> = ( {imageUrls} ) => {
                         alt="image slide"
                         />
                     </Carousel.Item>
-                })}
+                })} */}
+                <Carousel.Item>
+                        <img 
+                        className="d-block w-100"
+                        src={images[0]}
+                        alt="image slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img 
+                        className="d-block w-100"
+                        src={images[1]}
+                        alt="image slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img 
+                        className="d-block w-100"
+                        src={images[2]}
+                        alt="image slide"
+                        />
+                    </Carousel.Item>
             </Carousel>
         </>
     ) 

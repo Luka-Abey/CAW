@@ -59,7 +59,7 @@ const SingleSubmission: React.FC<RouteComponentProps<MatchParams>> = (props) => 
                       <h1 className="heading title-heading">{submission?.title}</h1>
                       <p className="description">{submission?.description}</p>
                     </div>
-                    <div className="col-12 col-md-5 my-col">
+                    <div className="col-12 col-md-5 my-col image-col">
                     <ImageCarousel imageUrls={submission?.image}/>
                     </div>
                   </div>
