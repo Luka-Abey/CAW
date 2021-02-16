@@ -13,7 +13,6 @@ const ImageCarousel: React.FC<PropsType> = ( {imageUrls} ) => {
 
     useEffect(() => {
 
-        console.log(imageUrls);
         // If there are no images, set the image carousel to have the logo.
         if (imageUrls.length == 0) { 
             setImages(["https://imgur.com/n5VyLq2.png"]);
@@ -26,7 +25,9 @@ const ImageCarousel: React.FC<PropsType> = ( {imageUrls} ) => {
     return (
         <>  
             <Carousel>
-                {/* { images?.map((image, index) => {
+                { images?.map((image, index) => {
+                    {console.log(image)}
+                    return ( 
                     <Carousel.Item>
                         <img 
                         className="d-block w-100"
@@ -34,29 +35,8 @@ const ImageCarousel: React.FC<PropsType> = ( {imageUrls} ) => {
                         src={image}
                         alt="image slide"
                         />
-                    </Carousel.Item>
-                })} */}
-                <Carousel.Item>
-                        <img 
-                        className="d-block w-100"
-                        src={images[0]}
-                        alt="image slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img 
-                        className="d-block w-100"
-                        src={images[1]}
-                        alt="image slide"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img 
-                        className="d-block w-100"
-                        src={images[2]}
-                        alt="image slide"
-                        />
-                    </Carousel.Item>
+                    </Carousel.Item>) 
+                })}
             </Carousel>
         </>
     ) 
