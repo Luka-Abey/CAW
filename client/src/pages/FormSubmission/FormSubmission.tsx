@@ -255,7 +255,7 @@ const Submission: React.FC = () => {
               <textarea required className="form-control text-area" maxLength={3000} name="skills" onChange={handleTextArea} value={submission.skills} />
             </div>          
             <div className="form-group">
-              <label >Outline the rough costs for your idea - how will it fit into the allocated budget? (max 200 words)</label>
+              <label >Outline the rough costs for your idea - how will it fit into the allocated £500 budget? (max 200 words)</label>
               <br/>
               <label className="sub-label">No need to be exact, just a rough estimate will do.</label>
               <textarea required className="form-control text-area" maxLength={3000} placeholder="" name="costs" onChange={handleTextArea} value={submission.costs} />
