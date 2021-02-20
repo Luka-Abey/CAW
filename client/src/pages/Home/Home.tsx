@@ -18,7 +18,7 @@ const Home: React.FC = () => {
           <br/>
           <br/>
          {/* eslint-disable-next-line  */}
-          You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. With help from ‘The Big Clearout’, we managed to gather a load of stuff donated by students in June, and we put it in one of our members' basements for storage. Then, in September, we set up a series of pay-as-you-feel shops to give the pre-loved goodies back to students as they arrived in Leeds. We raised over £250 in donations and we’re very happy about this!
+          You might know us from our <a href="https://www.facebook.com/events/1019083138553638/" target="_blank"> Free Shops</a>, which we ran back in September. With help from ‘The Big Clearout’, we managed to gather a load of stuff donated by students in June, and we put it in one of our members' basements for storage. Then, in September, we set up a series of pay-as-you-feel shops to give the pre-loved goodies back to students as they arrived in Leeds. We raised £500 in donations and we’re very happy about this!
           </p>
         </div>
       </div>
@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           <h2 className="header custom-heading">Current Project</h2>
           <hr className="hr white"/>
           <div className="text-wrapper">
-            <p>Using the £250 raised from our shops, we are looking to fund an idea to decorate and invigorate street sections cut off as part of the Hyde Park Active Travel Neighbourhoods (ATN) initiative. These ideas will be both designed and implemented by the community.</p>
+            <p>Using the £500 raised from donations, we are looking to fund an idea to decorate and invigorate street sections cut off as part of the Hyde Park Active Travel Neighbourhoods (ATN) initiative. These ideas will be both designed and implemented by the community.</p>
           </div>
         </div>
 
