@@ -15,6 +15,12 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
+
+    p {
+      margin: 25px 0px;
+      text-align: left;
+      line-height: 1.4rem;
+    }
   }
 
   .custom-heading {
@@ -34,12 +40,12 @@
 
 .link-to-example {
   text-decoration: none;
-  color: black;
+  color: rgb(31, 110, 255);
   text-decoration: underline;
   transition: 0.5s;
   &:hover {
     text-decoration: none;
-    color: black;
+    color: rgba(31, 109, 255, 0.692);
   }
 }
 .btn {
